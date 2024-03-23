@@ -1,7 +1,7 @@
 ---
 title: 'Xamarin Shell for Web Developers'
 date: 2020-01-27T17:18:40+01:00
-draft: true
+draft: false
 ---
 
 Coming from web development, I have become very used to and familiar with the MVC architecture for development. It allows for good decoupling of components and also allows for excellent use of Dependency Injection (DI). Having moved to start teaching myself mobile app development through Xamarin Forms , I found the view centric approach to navigation very odd and strange. It was tightly coupled to the framework and I spent hours trying to come up with the perfect navigation service that was generic enough to use.

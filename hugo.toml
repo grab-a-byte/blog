@@ -1,58 +1,35 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-theme = 'anubis'
-
-paginate = 10
-
-[[menu.main]]
-identifier = "archive"
-name = "Archive"
-title = "Archive"
-url = "/posts/"
-weight = 0
+theme = 'tailwind'
 
 [params]
-author = "Adam Parker"
-email = "mail@example.org"
-avatar = "/images/me.png"
-description = "Time is an illusion, Lunch doubly so - Douglas Adams"
-dateFormat = "2006-01-02"
-paginationSinglePost = true
-style = "dark"
-mainSections = [ "posts" ]
-sectionsWithFullContentOnListPage = [ "notes" ]
-readMore = false
-readNextPosts = 5
-disableSummary = true
-toc = true
-tocWordCount = 300
-copyCodeButton = true
-rssAsSocialIcon = true
-mathjax = false
-utterancesRepo = ""
-utterancesTheme = ""
-utterancesIssue = ""
-utterancesLabel = ""
-graphcommentId = ""
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
 
-[params.isso]
+  [params.header]
+    logo = "logo.png"
+
+  [params.footer]
+    since = 2023
+    poweredby = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 0
+
+ [taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[[params.social_media.items]]
 enabled = true
-data = "https://comments.example.com/"
-jsLocation = "https://comments.example.com/js/embed.min.js"
-css = true
-lang = "de"
-replyToSelf = true
-requireAuthor = true
-requireEmail = true
-id = "thread-id"
-avatar = true
-avatar-bg = "#f0f0f0"
-feed = false
-
-[[params.social]]
-id = "github"
-name = "grab-a-byte"
-
-[markup.goldmark.renderer]
-unsafe = true
+title = 'Github'
+icon = 'brand-github'
+link = 'https://github.com/grab-a-byte/'
