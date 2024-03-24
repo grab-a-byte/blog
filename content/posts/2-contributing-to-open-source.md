@@ -2,6 +2,7 @@
 title: 'Can contributing to open source be easy?'
 date: 2019-06-16T23:38:30+01:00
 draft: false
+toc: false
 ---
 
 

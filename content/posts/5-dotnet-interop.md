@@ -2,6 +2,7 @@
 title : 'Dotnet  Interop'
 date : 2020-02-29T19:38:35Z
 draft : false
+toc: false
 ---
 
 # What is DotNet?
