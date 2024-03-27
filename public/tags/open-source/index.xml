@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open Source on Adam Parker&#39;s Blog</title>
+    <link>http://localhost:1313/tags/open-source/</link>
+    <description>Recent content in Open Source on Adam Parker&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 May 2019 09:03:20 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Open Source Pull Request</title>
+      <link>http://localhost:1313/posts/1-my-first-pull-request/</link>
+      <pubDate>Thu, 30 May 2019 09:03:20 -0800</pubDate>
+      <guid>http://localhost:1313/posts/1-my-first-pull-request/</guid>
+      <description>I always thought open source would be a scary world and the start of it was. I was shown a nice little website named First Timers Only ( https://www.firsttimersonly.com/&#xD;), and this was my entry point. This lead me to the UpForGrabs page and I started filtering by what I knew, .NET. (Yes I skipped first contributions, if I don’t know how to do a pull request after working in industry for a year, I may be in the wrong profession)</description>
+    </item>
+  </channel>
+</rss>

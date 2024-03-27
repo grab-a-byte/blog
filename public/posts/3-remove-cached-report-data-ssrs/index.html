@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <title>404 Page not found :: Adam Parker&#39;s Blog - Example site for hugo-theme-tailwind</title>
+  <title>Remove Cached Report Data Ssrs :: Adam Parker&#39;s Blog - Example site for hugo-theme-tailwind</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta
   name="description"
-  content=""
+  content="I was working with a SQL Server Reporting Services (SSRS) Report the other day and found myself trying to work with some data changes while writing the report to ensure the report was behaving as expected. Initially, nothing on the report changed even though I had changed the data, I found this odd and thought I might’ve been pointing at the wrong database. After a bit of googling, I found that report data get cached after the first run of previewing a report."
 />
 <meta
   name="keywords"
   content="hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
 />
 <meta name="robots" content="noodp" />
-<meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/404.html" />
-
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content=""/>
+<meta property="og:title" content="Remove Cached Report Data Ssrs" />
+<meta property="og:description" content="I was working with a SQL Server Reporting Services (SSRS) Report the other day and found myself trying to work with some data changes while writing the report to ensure the report was behaving as expected. Initially, nothing on the report changed even though I had changed the data, I found this odd and thought I might’ve been pointing at the wrong database. After a bit of googling, I found that report data get cached after the first run of previewing a report." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/3-remove-cached-report-data-ssrs/" /><meta property="article:section" content="posts" />
 
 
-<link rel="canonical" href="http://localhost:1313/404.html" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Remove Cached Report Data Ssrs"/>
+<meta name="twitter:description" content="I was working with a SQL Server Reporting Services (SSRS) Report the other day and found myself trying to work with some data changes while writing the report to ensure the report was behaving as expected. Initially, nothing on the report changed even though I had changed the data, I found this odd and thought I might’ve been pointing at the wrong database. After a bit of googling, I found that report data get cached after the first run of previewing a report."/>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/3-remove-cached-report-data-ssrs/" />
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="stylesheet" href="/css/index.d939d2ce17f7f025a103ff6d16e4b0f5f61d6f26b2aab7e64485e1820cf3e497.css">
@@ -69,7 +71,7 @@
     <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
     
         <li id="post" class="">
-          <a class="block px-3 py-3 hover:text-emerald-600"
+          <a class="block px-3 py-3 hover:text-emerald-600 text-emerald-600"
             href="/posts/" title="Post">Post</a>
         </li>
       
@@ -132,18 +134,76 @@
   </header>
   <main class="flex flex-auto justify-center">
     
-  <main class="grid place-items-start w-full min-h-full max-w-4xl lg:max-w-5xl px-6 py-24">
-    <div class="text-center w-full">
-      <p class="text-base font-semibold text-indigo-600 dark:text-indigo-300">404</p>
-      <h1 class="mt-4 text-3xl font-bold tracking-tight text-slate-800 dark:text-slate-200 sm:text-5xl">Page not found</h1>
-      <p class="mt-6 text-base leading-7 text-slate-500 dark:text-slate-300">Sorry, we couldn&#39;t find the page you&#39;re looking for.</p>
-      <div class="mt-10 flex items-center justify-center gap-x-6">
-        <a href=/ class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-          Go back home
-        </a>
-      </div>
-    </div>
-  </main>
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <div class="flex flex-col gap-y-3 p-6 mt-6 mx-2 md:mx-0 rounded-lg shadow-md bg-white dark:bg-gray-700">
+    <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+      <a href="/posts/3-remove-cached-report-data-ssrs/">Remove Cached Report Data Ssrs</a>
+    </h1>
+
+    
+    
+
+
+    <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hourglass-high" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M6.5 7h11"></path>
+   <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+   <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
+</svg>
+
+    </i>
+    <span>
+      2 minutes to read
+    </span>
+  </div>
+</div>
+
+
+    
+      
+    
+
+    <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+      <p>I was working with a SQL Server Reporting Services (SSRS) Report the other day and found myself trying to work with some data changes while writing the report to ensure the report was behaving as expected. Initially, nothing on the report changed even though I had changed the data, I found this odd and thought I might’ve been pointing at the wrong database. After a bit of googling, I found that report data get cached after the first run of previewing a report.</p>
+<p>In order to force the data to update, you must delete files from within the solution directory with the extension of “.rdl.data”. I can’t remember exactly which folder this is in, however it was getting tedious going into this folder and deleting those file all the time. As such, I had some fun playing around with the “External tools” section of Visual Studio and came up with the below.</p>
+<p>If you click on Tools-&gt;External Tools in the top menu, click add give it a name of your choosing and use the following settings:-</p>
+<ul>
+<li>Command: %WinDir%\System32\cmd.exe</li>
+<li>Arguments: /C DEL /S /Q “$(SolutionDir)*.rdl.data”</li>
+</ul>
+<p><div class="not-prose">
+<figure>
+    <img src="/ssrs-clear-data/ssrs-external-tools.png"
+      alt="Visual Stuaio Add External Tool" 
+      loading="lazy"
+    >
+  </figure></div>
+</p>
+<p><strong>WARNING: ONLY RAN ON WINDOWS – PLEASE GIVE A VS FOR MAC IMPLEMENTATION SO I CAN UPDATE IF YOU KNOW THE EQUIVELENT</strong></p>
+<p>All this says is open up cmd.exe (Command Prompt) and run the command placed into the arguments. In this case, it will Delete all “.rdl.data” files within the solution directory, and it won’t echo it out.</p>
+<p>You should now have a handy button in the Tools menu with whatever you called your external tool (in my case “Remove Cached Report Data”)</p>
+<p><div class="not-prose">
+<figure>
+    <img src="/ssrs-clear-data/vs-tool-added.png"
+      alt="Visual Studio Tool Added" 
+      loading="lazy"
+    >
+  </figure></div>
+</p>
+<p>Clicking this will now remove report data and you don’t have to worry about continuously jumping into the File Explorer and removing these files while testing reports, simply click this before each run and any data caching should be removed.</p>
+<p>Hope this helps.</p>
+
+    </article>
+
+    
+
+
+
+  </div>
+</div>
 
   </main>
   <footer class="flex flex-none justify-center">
