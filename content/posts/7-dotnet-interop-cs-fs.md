@@ -1,7 +1,7 @@
 ---
 title: 'Dotnet Interop:- C# and F#'
 date: 2020-04-29T22:04:54Z
-draft: true
+draft: false
 ---
 
 ## What makes F# special?
