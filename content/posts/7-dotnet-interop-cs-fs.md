@@ -27,7 +27,12 @@ When a Module is imported, it represents itself as a static class in C#. This al
 
 For example, this code here:
 
-{{< gist grab-a-byte 7b40dbb17d59524b9c530aa28818feef NamespaceAndModules.fs >}}
+```js
+namespace FSharpClassLib
+
+module FunctionalParadigms =
+    let aNumber = 5
+```
 
 ```haskell
 type x = | One | Two
@@ -35,7 +40,19 @@ type x = | One | Two
 
 Can be used in a C# console app as follows:
 
-{{< gist grab-a-byte 9c4eeb48de65c4e8e2f99afd81dd10fa NamespaceAndModules.cs >}}
+```cs
+using FSharpClassLib;
+namespace CSharpConsole
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          var test = FunctionalParadigms.aNumber;
+        }
+    }
+}
+```
 
 Above, you also see an example of standalone values being used from F# in C#. again simply showing itself as a static field.
 
@@ -49,7 +66,7 @@ In F#,  [“Records represent simple aggregates of named values, optionally with
 With these defined, it may come as no surprise that to instantiate a F# record in C#, you use an ‘All Arguments Constructor’. This guarantees known values, it also allows the Properties consumed by C# to be read only and s such, keep in line with the Immutability aspect of F#.
 
 The Structural Equality also get implemented by default even on the C# side. So using a record made in F#, and using
-```c#
+```cs
 var a = new Thing(1, true);
 var b = new Thing(1, true);
 ```
@@ -57,14 +74,69 @@ in C#, the objects a and b are equal.
 
 To how this in action here’s a simple F# Record
 
-{{< gist grab-a-byte bc17a80d67d4664c009713cb1ea7ad2d FSRecordsInCS.fs >}}
+```haskell
+namespace FSharpClassLib
+
+module FunctionalParadigms =
+   type TypeTwo = {
+      isTrue : bool
+      SomeNumber: double
+  }
+```
 
 It is used in a C# Console App as follows:
 
-{{< gist grab-a-byte 107067f1e3055dcf8b44f8c47a537a17 FSRecordInCs.cs >}}
+```cs
+using FSharpClassLib;
+using System;
+
+namespace CSharpConsole
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var a = new FunctionalParadigms.TypeTwo(true, 1.1);
+            var b = new FunctionalParadigms.TypeTwo(true, 1.1);
+
+            Console.WriteLine(a.Equals(b)); // This prints True!
+            Console.ReadKey();
+        }
+    }
+}
+```
 
 And when decompiled, shows the following
-{{< gist grab-a-byte 5b479de54568d4ced5bd10d6ea950f2c TypeTwoInterface.cs >}}
+
+```cs
+public sealed class TypeTwo : IEquatable<TypeTwo>, IStructuralEquatable, IComparable<TypeTwo>, IComparable, IStructuralComparable
+{
+    public TypeTwo(bool isTrue, double someNumber);
+
+    [CompilationMapping(SourceConstructFlags.Field, 0)]
+    public bool isTrue { get; }
+    [CompilationMapping(SourceConstructFlags.Field, 1)]
+    public double SomeNumber { get; }
+    [CompilerGenerated]
+    public sealed override int CompareTo(TypeTwo obj);
+    [CompilerGenerated]
+    public sealed override int CompareTo(object obj);
+    [CompilerGenerated]
+    public sealed override int CompareTo(object obj, IComparer comp);
+    [CompilerGenerated]
+    public sealed override bool Equals(object obj, IEqualityComparer comp);
+    [CompilerGenerated]
+    public sealed override bool Equals(TypeTwo obj);
+    [CompilerGenerated]
+    public sealed override bool Equals(object obj);
+    [CompilerGenerated]
+    public sealed override int GetHashCode(IEqualityComparer comp);
+    [CompilerGenerated]
+    public sealed override int GetHashCode();
+    [CompilerGenerated]
+    public override string ToString();
+}
+```
 
 Neat huh?
 
