@@ -4,10 +4,31 @@
     <title>Dotnet Interop on Adam Parker&#39;s Blog</title>
     <link>http://localhost:1313/tags/dotnet-interop/</link>
     <description>Recent content in Dotnet Interop on Adam Parker&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Apr 2020 20:47:35 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2020 22:18:08 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/dotnet-interop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dotnet Interop: C# and F# Pt. 3</title>
+      <link>http://localhost:1313/posts/9-dotnet-interop-cs-fs-pt3/</link>
+      <pubDate>Sat, 29 Aug 2020 22:18:08 +0000</pubDate>
+      <guid>http://localhost:1313/posts/9-dotnet-interop-cs-fs-pt3/</guid>
+      <description>So over the last couple of posts, we’ve looked at what does work well in C# from F#, and most of it seems to go pretty smoothly. But there are occasions where the languages refuse to play nice with each other. That’s what we’ll be discussing in this final post.&#xA;Options Option in F# are a way to get around the idea of null by providing two ‘sub-types’ called Some and None.</description>
+    </item>
+    <item>
+      <title>Dotnet Interop: C# and F# Pt. 2</title>
+      <link>http://localhost:1313/posts/8-dotnet-interop-cs-fs-pt2/</link>
+      <pubDate>Fri, 03 Jul 2020 22:09:47 +0000</pubDate>
+      <guid>http://localhost:1313/posts/8-dotnet-interop-cs-fs-pt2/</guid>
+      <description>Continuing on from where we left off last time, we will try to cover off the rest of F#’s features that play really well and simply when being consumed from a C# codebase.&#xA;Values F# can have values places directly inside modules, almost ‘global’ values in the module. See an example below :-&#xA;module FunctionalParadigms let aNumber = 5 As we know from the last post, modules expose themselves as static classes in C#.</description>
+    </item>
+    <item>
+      <title>Dotnet Interop:- C# and F#</title>
+      <link>http://localhost:1313/posts/7-dotnet-interop-cs-fs/</link>
+      <pubDate>Wed, 29 Apr 2020 22:04:54 +0000</pubDate>
+      <guid>http://localhost:1313/posts/7-dotnet-interop-cs-fs/</guid>
+      <description>What makes F# special? In the Dotnet world, F# stand out as being the Functional based language. This might sound strange, and I on’t have time to go into the full difference between Function and Object-Oriented languages and paradigms here, please do a google if you wish to learn more.&#xA;Some of the main features of F# that are relevant to this series are as follows:-&#xA;Higher Order Functions Modules Records Sequences Discriminated Unions Options I put them in this order for a reason.</description>
+    </item>
     <item>
       <title>Dotnet Interop:-  C# and Visual Basic</title>
       <link>http://localhost:1313/posts/6-dotnet-interop-cs-vb/</link>

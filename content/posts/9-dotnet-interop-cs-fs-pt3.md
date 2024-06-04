@@ -1,6 +1,7 @@
 ---
 title: 'Dotnet Interop: C# and F# Pt. 3'
 date: 2020-08-29T22:18:08Z
+tags: ['Dotnet Interop', 'csharp', 'visual basic']
 draft: false
 ---
 

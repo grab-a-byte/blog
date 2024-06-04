@@ -3,27 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2020-04-29T22:04:54+00:00</lastmod>
+    <lastmod>2024-05-29T20:30:30+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/10-functional-syntax-holding-it-back/</loc>
+    <lastmod>2024-05-29T20:30:30+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-05-29T20:30:30+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/csharp/</loc>
+    <lastmod>2020-08-29T22:18:08+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/dotnet-interop/</loc>
+    <lastmod>2020-08-29T22:18:08+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/9-dotnet-interop-cs-fs-pt3/</loc>
+    <lastmod>2020-08-29T22:18:08+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2020-08-29T22:18:08+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/visual-basic/</loc>
+    <lastmod>2020-08-29T22:18:08+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/8-dotnet-interop-cs-fs-pt2/</loc>
+    <lastmod>2020-07-03T22:09:47+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/7-dotnet-interop-cs-fs/</loc>
     <lastmod>2020-04-29T22:04:54+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2020-04-29T22:04:54+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/csharp/</loc>
-    <lastmod>2020-04-01T20:47:35+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/dotnet-interop/</loc>
-    <lastmod>2020-04-01T20:47:35+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/6-dotnet-interop-cs-vb/</loc>
-    <lastmod>2020-04-01T20:47:35+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2020-04-01T20:47:35+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/visual-basic/</loc>
     <lastmod>2020-04-01T20:47:35+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/5-dotnet-interop/</loc>

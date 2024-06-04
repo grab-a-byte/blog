@@ -1,6 +1,7 @@
 ---
 title: 'Dotnet Interop: C# and F# Pt. 2'
 date: 2020-07-03T22:09:47Z
+tags: ['Dotnet Interop', 'csharp', 'visual basic']
 draft: false
 ---
 Continuing on from where we left off last time, we will try to cover off the rest of F#’s features that play really well and simply when being consumed from a C# codebase.

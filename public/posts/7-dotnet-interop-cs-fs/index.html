@@ -16,28 +16,39 @@ Higher Order Functions Modules Records Sequences Discriminated Unions Options I 
   content="hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
 />
 <meta name="robots" content="noodp" />
-<meta property="og:title" content="Dotnet Interop:- C# and F#" />
-<meta property="og:description" content="What makes F# special? In the Dotnet world, F# stand out as being the Functional based language. This might sound strange, and I on’t have time to go into the full difference between Function and Object-Oriented languages and paradigms here, please do a google if you wish to learn more.
+<meta property="og:url" content="http://localhost:1313/posts/7-dotnet-interop-cs-fs/">
+  <meta property="og:site_name" content="Adam Parker&#39;s Blog">
+  <meta property="og:title" content="Dotnet Interop:- C# and F#">
+  <meta property="og:description" content="What makes F# special? In the Dotnet world, F# stand out as being the Functional based language. This might sound strange, and I on’t have time to go into the full difference between Function and Object-Oriented languages and paradigms here, please do a google if you wish to learn more.
 Some of the main features of F# that are relevant to this series are as follows:-
-Higher Order Functions Modules Records Sequences Discriminated Unions Options I put them in this order for a reason." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/7-dotnet-interop-cs-fs/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-04-29T22:04:54+00:00" />
-<meta property="article:modified_time" content="2020-04-29T22:04:54+00:00" />
+Higher Order Functions Modules Records Sequences Discriminated Unions Options I put them in this order for a reason.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-04-29T22:04:54+00:00">
+    <meta property="article:modified_time" content="2020-04-29T22:04:54+00:00">
+    <meta property="article:tag" content="Dotnet Interop">
+    <meta property="article:tag" content="Csharp">
+    <meta property="article:tag" content="Visual Basic">
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Dotnet Interop:- C# and F#"/>
-<meta name="twitter:description" content="What makes F# special? In the Dotnet world, F# stand out as being the Functional based language. This might sound strange, and I on’t have time to go into the full difference between Function and Object-Oriented languages and paradigms here, please do a google if you wish to learn more.
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dotnet Interop:- C# and F#">
+  <meta name="twitter:description" content="What makes F# special? In the Dotnet world, F# stand out as being the Functional based language. This might sound strange, and I on’t have time to go into the full difference between Function and Object-Oriented languages and paradigms here, please do a google if you wish to learn more.
 Some of the main features of F# that are relevant to this series are as follows:-
-Higher Order Functions Modules Records Sequences Discriminated Unions Options I put them in this order for a reason."/>
+Higher Order Functions Modules Records Sequences Discriminated Unions Options I put them in this order for a reason.">
 
 
 <link rel="canonical" href="http://localhost:1313/posts/7-dotnet-interop-cs-fs/" />
 
 <link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="/css/index.d939d2ce17f7f025a103ff6d16e4b0f5f61d6f26b2aab7e64485e1820cf3e497.css">
+<link rel="stylesheet" href="/css/index.7e915884f3dd6d57e42096f9ebaa8c2c1bce67d7b52260cc1f09af3ab6af714a.css">
 
 
 
+
+
+  
 
 
 
@@ -148,6 +159,64 @@ Higher Order Functions Modules Records Sequences Discriminated Unions Options I 
 
     
     
+  <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
+    
+    
+      
+      <li>
+        <a href="/tags/dotnet-interop/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">Dotnet Interop</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/csharp/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">csharp</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags/visual-basic/"
+          class="flex flex-row text-sm mr-2 py-1">
+          <i class="h-5 w-5 flex-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M5 9l14 0"></path>
+   <path d="M5 15l14 0"></path>
+   <path d="M11 4l-4 16"></path>
+   <path d="M17 4l-4 16"></path>
+</svg>
+
+          </i>
+          <span class="ml-0">visual basic</span>
+        </a>
+      </li>
+      
+    
+  </ul>
+
 
 
     <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
@@ -182,7 +251,7 @@ Higher Order Functions Modules Records Sequences Discriminated Unions Options I 
 
     </i>
     <span>
-      3 minutes to read
+      4 minutes to read
     </span>
   </div>
 </div>
@@ -221,13 +290,24 @@ Higher Order Functions Modules Records Sequences Discriminated Unions Options I 
 <p>So why bother with Modules at all? Firstly, Modules are more in line with the way F# has been built up and as such, you will find it used in most F# libraries instead, we can still use these Modules in C#.</p>
 <p>When a Module is imported, it represents itself as a static class in C#. This allows for seamless usage between F# and C# code on both sides as in F#, we use ‘open’ statements on C# imports.</p>
 <p>For example, this code here:</p>
-<script src="https://gist.github.com/grab-a-byte/7b40dbb17d59524b9c530aa28818feef.js?file=NamespaceAndModules.fs"></script>
-
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> x <span style="color:#f92672">=</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">One</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">Two</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">namespace</span> <span style="color:#a6e22e">FSharpClassLib</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">module</span> <span style="color:#a6e22e">FunctionalParadigms</span> <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">aNumber</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> x <span style="color:#f92672">=</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">One</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">Two</span>
 </span></span></code></pre></div><p>Can be used in a C# console app as follows:</p>
-<script src="https://gist.github.com/grab-a-byte/9c4eeb48de65c4e8e2f99afd81dd10fa.js?file=NamespaceAndModules.cs"></script>
-
-<p>Above, you also see an example of standalone values being used from F# in C#. again simply showing itself as a static field.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> FSharpClassLib;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> CSharpConsole
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">var</span> test = FunctionalParadigms.aNumber;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Above, you also see an example of standalone values being used from F# in C#. again simply showing itself as a static field.</p>
 <h2 id="records">Records</h2>
 <p>In F#,  <a href="https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/records" target="_blank" rel="noopener">“Records represent simple aggregates of named values, optionally with members. They can either be structs or reference types. They are reference types by default.”</a>
 . That seems like a mouthful, and basically it means, it’s an object that holds a combination of values. In C# terms, it’s effectively a class with a bunch of properties on it. Whilst that sounds simple, something to know about F# is it uses Structural Equality and by default, it’s data structures are Immutable. For those unfamiliar with these terms, they are as follows:</p>
@@ -237,19 +317,64 @@ Higher Order Functions Modules Records Sequences Discriminated Unions Options I 
 </ol>
 <p>With these defined, it may come as no surprise that to instantiate a F# record in C#, you use an ‘All Arguments Constructor’. This guarantees known values, it also allows the Properties consumed by C# to be read only and s such, keep in line with the Immutability aspect of F#.</p>
 <p>The Structural Equality also get implemented by default even on the C# side. So using a record made in F#, and using</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> a = <span style="color:#66d9ef">new</span> Thing(<span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">true</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> a = <span style="color:#66d9ef">new</span> Thing(<span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">true</span>);
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> b = <span style="color:#66d9ef">new</span> Thing(<span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">true</span>);
 </span></span></code></pre></div><p>in C#, the objects a and b are equal.</p>
 <p>To how this in action here’s a simple F# Record</p>
-<script src="https://gist.github.com/grab-a-byte/bc17a80d67d4664c009713cb1ea7ad2d.js?file=FSRecordsInCS.fs"></script>
-
-<p>It is used in a C# Console App as follows:</p>
-<script src="https://gist.github.com/grab-a-byte/107067f1e3055dcf8b44f8c47a537a17.js?file=FSRecordInCs.cs"></script>
-
-<p>And when decompiled, shows the following
-<script src="https://gist.github.com/grab-a-byte/5b479de54568d4ced5bd10d6ea950f2c.js?file=TypeTwoInterface.cs"></script>
-</p>
-<p>Neat huh?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">namespace</span> <span style="color:#66d9ef">FSharpClassLib</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">module</span> FunctionalParadigms <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">type</span> <span style="color:#66d9ef">TypeTwo</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>      isTrue <span style="color:#66d9ef">:</span> bool
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">SomeNumber:</span> double
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><p>It is used in a C# Console App as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> FSharpClassLib;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> CSharpConsole
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> a = <span style="color:#66d9ef">new</span> FunctionalParadigms.TypeTwo(<span style="color:#66d9ef">true</span>, <span style="color:#ae81ff">1.1</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> b = <span style="color:#66d9ef">new</span> FunctionalParadigms.TypeTwo(<span style="color:#66d9ef">true</span>, <span style="color:#ae81ff">1.1</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            Console.WriteLine(a.Equals(b)); <span style="color:#75715e">// This prints True!</span>
+</span></span><span style="display:flex;"><span>            Console.ReadKey();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>And when decompiled, shows the following</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TypeTwo</span> : IEquatable&lt;TypeTwo&gt;, IStructuralEquatable, IComparable&lt;TypeTwo&gt;, IComparable, IStructuralComparable
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> TypeTwo(<span style="color:#66d9ef">bool</span> isTrue, <span style="color:#66d9ef">double</span> someNumber);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [CompilationMapping(SourceConstructFlags.Field, 0)]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">bool</span> isTrue { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [CompilationMapping(SourceConstructFlags.Field, 1)]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">double</span> SomeNumber { <span style="color:#66d9ef">get</span>; }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [CompilerGenerated]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">int</span> CompareTo(TypeTwo obj);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [CompilerGenerated]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">int</span> CompareTo(<span style="color:#66d9ef">object</span> obj);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [CompilerGenerated]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">int</span> CompareTo(<span style="color:#66d9ef">object</span> obj, IComparer comp);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [CompilerGenerated]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">bool</span> Equals(<span style="color:#66d9ef">object</span> obj, IEqualityComparer comp);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [CompilerGenerated]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">bool</span> Equals(TypeTwo obj);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [CompilerGenerated]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">bool</span> Equals(<span style="color:#66d9ef">object</span> obj);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [CompilerGenerated]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">int</span> GetHashCode(IEqualityComparer comp);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [CompilerGenerated]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">int</span> GetHashCode();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [CompilerGenerated]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">string</span> ToString();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Neat huh?</p>
 <p>I think this should be enough information for now, however, in the next post we will continue exploring this interaction between the two languages and how it plays well together.</p>
 <p>Any questions comment below or feel free to use the contact me page.</p>
 <p>See you next time!</p>
