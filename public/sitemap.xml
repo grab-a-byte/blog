@@ -2,84 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://example.org/</loc>
     <lastmod>2024-05-29T20:30:30+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/10-functional-syntax-holding-it-back/</loc>
+    <loc>https://example.org/posts/</loc>
     <lastmod>2024-05-29T20:30:30+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-05-29T20:30:30+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/csharp/</loc>
+    <loc>https://example.org/tags/csharp/</loc>
     <lastmod>2020-08-29T22:18:08+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dotnet-interop/</loc>
+    <loc>https://example.org/tags/dotnet-interop/</loc>
     <lastmod>2020-08-29T22:18:08+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/9-dotnet-interop-cs-fs-pt3/</loc>
+    <loc>https://example.org/posts/9-dotnet-interop-cs-fs-pt3/</loc>
     <lastmod>2020-08-29T22:18:08+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://example.org/tags/</loc>
     <lastmod>2020-08-29T22:18:08+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/visual-basic/</loc>
+    <loc>https://example.org/tags/visual-basic/</loc>
     <lastmod>2020-08-29T22:18:08+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/8-dotnet-interop-cs-fs-pt2/</loc>
+    <loc>https://example.org/posts/8-dotnet-interop-cs-fs-pt2/</loc>
     <lastmod>2020-07-03T22:09:47+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/7-dotnet-interop-cs-fs/</loc>
+    <loc>https://example.org/posts/7-dotnet-interop-cs-fs/</loc>
     <lastmod>2020-04-29T22:04:54+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/6-dotnet-interop-cs-vb/</loc>
+    <loc>https://example.org/posts/6-dotnet-interop-cs-vb/</loc>
     <lastmod>2020-04-01T20:47:35+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/5-dotnet-interop/</loc>
+    <loc>https://example.org/posts/5-dotnet-interop/</loc>
     <lastmod>2020-02-29T19:38:35+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/4-xamarin-shell-for-web-developers/</loc>
+    <loc>https://example.org/posts/4-xamarin-shell-for-web-developers/</loc>
     <lastmod>2020-01-27T17:18:40+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2-contributing-to-open-source/</loc>
+    <loc>https://example.org/posts/2-contributing-to-open-source/</loc>
     <lastmod>2019-06-16T23:38:30+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/1-my-first-pull-request/</loc>
+    <loc>https://example.org/posts/1-my-first-pull-request/</loc>
     <lastmod>2019-05-30T09:03:20-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/open-source/</loc>
+    <loc>https://example.org/tags/open-source/</loc>
     <lastmod>2019-05-30T09:03:20-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://example.org/search/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.es/</loc>
+    <loc>https://example.org/search/_index.es/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.fr/</loc>
+    <loc>https://example.org/search/_index.fr/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.hi/</loc>
+    <loc>https://example.org/search/_index.hi/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.jp/</loc>
+    <loc>https://example.org/search/_index.jp/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.pl/</loc>
+    <loc>https://example.org/search/_index.pl/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.ru/</loc>
+    <loc>https://example.org/search/_index.ru/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/search/_index.zh-cn/</loc>
+    <loc>https://example.org/search/_index.zh-cn/</loc>
     <priority>0.1</priority>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://example.org/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://example.org/posts/3-remove-cached-report-data-ssrs/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/3-remove-cached-report-data-ssrs/</loc>
-  </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://example.org/series/</loc>
   </url>
 </urlset>
