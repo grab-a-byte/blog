@@ -7,9 +7,9 @@ toc: false
 
 Recently I've been looking at a few programming languages and in particular the functional ones and noticed that there appears to be a trend with them. While having some very good benefits and being quite the joy to use and write in, they seem to be not very popular. As you may have guessed from the title, I think a large part of this is down to syntax and I'd like to try and explain why I think this may be. I'd Ike to preface it with it not being the only reason I think but it's for sure one of my larger ideas as to why this may be
 
-For reference, this post is purely a food for thought kind of post and is not an argument either way.
+For reference, this post is purely a food for thought kind of post and is not an argument in any way.
 
-## Most Popular, also most C-Like. Coincidence?
+## Most Popular Languages are also the most C-Like. Coincidence?
 
 Using the website [Languish](https://tjpalmer.github.io/languish/) as a means of measuring popularity, the top 8 (as of writing this) are as follows:
 - Python
@@ -22,6 +22,7 @@ Using the website [Languish](https://tjpalmer.github.io/languish/) as a means of
 - C
 
 All of this with the exception of Python (which I imagine is coming from data science and the ever growing popularity of AI) have their basis in a C-Like way of writing code (including unsurprisingly, C...).
+
 My definition of a C-like language is one that:
 - Uses braces `{}` to denote scope.
 - Uses parenthesis `()` to denote function calls.
@@ -32,8 +33,14 @@ These all check at least 3 of those 4 boxes and that is enough for me to call th
 
 A final point on these languages is that none of them will claim to have come from a functional background and while some may have some functional features in their modern incarnations it was not a thought when they first came about.
 
-## Most popular languages with Functional Concepts
+#### Side Note: Meta-Language (ML) Syntax
+ML style languages are what I would name the opposite of C-like and they tend to have the following attributes:
+- Use whitespace indentation to denote blocks.
+- Heavier use on type inference to determine types.
+- No parenthesis to call functions, opting for a whitespace delimited list of arguments instead.
+- Uses the last evaluated expression as a return without the need of a specific return keyword.
 
+## Most popular languages with Functional Concepts
 To further the evidence that a C-like syntax is prevalent, I'd like to shift my attention to a couple of other popular languages that have been designed with some of these functional programming concepts all built in from the get-go of their design.
 
 ### Scala
@@ -67,13 +74,13 @@ class Person(val firstName: String, val lastName: String)
 ```
 
 As you can see, despite the conciseness, the syntax itself is still similar the that of the Java constructor and the C-like styling.
-If you would like to see more examples of this, have a google for examples of Scala vs Java code and you can find many more examples where Scala just looks like a 'cleaner' Java.
+If you would like to see more examples of this, have a Google for examples of Scala vs Java code and you can find many more examples where Scala just looks like a 'cleaner' Java.
 
 ### Rust
 Of course we need to speak about the elephant in the room here regarding a language with functional concepts built in from the start. Rust is a systems programming language that has taken the world by storm and is used in the Firefox's JavaScript and WebAssembly engine and has [made it into the Linux kernel](https://en.wikipedia.org/wiki/Rust_for_Linux) along with Microsoft investing [one million dollars](https://thenewstack.io/microsofts-1m-vote-of-confidence-in-rusts-future/) into the foundation behind it.
 Furthermore, This currently sits in position number 10 on the language and is a roaring success of a programming language.
 
-However, the compiler itself shows a telling story of how much the syntax (as well as familiarity with the language) can have a huge impact. Back in its first incarnation, the Rust compiler was written in [OCaml](https://ocaml.org/) as can be seen [here](https://github.com/rust-lang/rust/tree/ef75860a0a72f79f97216f8aaa5b388d98da6480/src/boot) in a commit from 2011, just before the compiler was re-written in itself.
+However, the compiler itself shows a telling story of how much the syntax (as well as familiarity with the language) can have a huge impact. Back in its first incarnation, the Rust compiler was written in [OCaml](https://ocaml.org/) as can be seen [here](https://github.com/rust-lang/rust/tree/ef75860a0a72f79f97216f8aaa5b388d98da6480/src/boot) in a commit from 2011, just before the compiler was re-written in Rust itself.
 
 Using the Github metrics graphs, from 2013 onwards, we see a sharp uptick in the number of contributors to the Rust compiler as shown by this graph.
 ![Rust Contributors Graph](/functional-syntax/rust-contributer-graph.png)
@@ -82,10 +89,11 @@ Obviously this is not all just due to the syntax and probably has a large amount
 
 
 ## So is this trend going to continue?
-I fully believe this trend is going to continue down this line and will continue to go in this direction and I have a couple of language examples to prove this/
+I fully believe this trend is going to continue down this line and will continue to go in this direction and I have a couple of language examples to prove this.
 
 ### Zig
-Zig is an up and coming language that while the language is still in Beta, was deemed to be good enough to be used in a fully fledged product known as [Tigerbeetle](https://tigerbeetle.com/).
+Zig is an up and coming language that while being in Beta, was deemed to be good enough to be used in two different fully fledged products known as [Tigerbeetle](https://tigerbeetle.com/) and [Bun](https://bun.sh/).
+
 Zig aims to be a systems level language similar to Rust listed above but with less guardrails around memory management making closer to being able to be a drop in replacement for C.
 Obviously coming from that domain will lead to the language trying to replicate C in its syntax and it does with the addition of some Functional features such as:
 
@@ -98,7 +106,7 @@ And this is just to name a few. However the uptake of Zig seems to lean furtherm
 ### Gleam
 Gleam is a really interesting language in that it uses the Erlang BEAM Virtual Machine. Erlang is a well known functional language that has been around for many many years (since 1986!) and currently sits at position 99 on the languish website, again a fairly notable achievement given it's functional and white-spaced nature. 
 
-The reason I mention Erlang is because Gleam is a language that had it's Version 1.0 release on the 4th March 2024 and has skyrocketed up to position 174 in the Languish website. While that may not seem impressive, it still puts it in the top 50% of all languages tracked and it is less than double the language built for the platform it runs on! Not too shabby for a new language. But also if we take a look at a sample of Gleam code:
+The reason I mention Erlang is because Gleam is a language that had it's Version 1.0 release on the 4th March 2024 and has skyrocketed up to position 174 in the Languish website. While that may not seem impressive, it still puts it in the top 50% of all languages tracked and it is less than double the language that was built for the platform it runs on! Not too shabby for a new language. But also if we take a look at a sample of Gleam code:
 
 ```gleam 
 import gleam/io
@@ -120,8 +128,8 @@ As you cam see, while not 100% on the C-like front, we still have the parenthesi
 
 I suppose this is my final point on the matter of showing how languages continue to be driven by the syntax of C and how this syntax could be tied to the popularity of new programming languages.
 
-# TODO: Define what ML means somewhere in the post
 ## Not to say "ML" inspired languages aren't used 
+
 I should probably reiterate that non-C-like languages do 100% have a place in the world and can be very useful for particular scenarios, right tool for the job and all that. Furthermore, I'd be amiss to not point out that the benefits functional languages can provide have made their cases shown in the form of some very large companies using these non-C-like languages and having great success with it. Examples of this include:
 
 - Twitter uses Scala in it's "Algorithm" (https://github.com/twitter/the-algorithm)

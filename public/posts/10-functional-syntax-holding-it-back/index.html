@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>Is syntax holding back functional programming? :: Adam Parker&#39;s Blog - Example site for hugo-theme-tailwind</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="Recently I&amp;rsquo;ve been looking at a few programming languages and in particular the functional ones and noticed that there appears to be a trend with them. While having some very good benefits and being quite the joy to use and write in, they seem to be not very popular. As you may have guessed from the title, I think a large part of this is down to syntax and I&amp;rsquo;d like to try and explain why I think this may be."
+/>
+<meta
+  name="keywords"
+  content="hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
+/>
+<meta name="robots" content="noodp" />
+<meta property="og:url" content="http://localhost:1313/posts/10-functional-syntax-holding-it-back/">
+  <meta property="og:site_name" content="Adam Parker&#39;s Blog">
+  <meta property="og:title" content="Is syntax holding back functional programming?">
+  <meta property="og:description" content="Recently I’ve been looking at a few programming languages and in particular the functional ones and noticed that there appears to be a trend with them. While having some very good benefits and being quite the joy to use and write in, they seem to be not very popular. As you may have guessed from the title, I think a large part of this is down to syntax and I’d like to try and explain why I think this may be.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-05-29T20:30:30+01:00">
+    <meta property="article:modified_time" content="2024-05-29T20:30:30+01:00">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Is syntax holding back functional programming?">
+  <meta name="twitter:description" content="Recently I’ve been looking at a few programming languages and in particular the functional ones and noticed that there appears to be a trend with them. While having some very good benefits and being quite the joy to use and write in, they seem to be not very popular. As you may have guessed from the title, I think a large part of this is down to syntax and I’d like to try and explain why I think this may be.">
+
+
+<link rel="canonical" href="http://localhost:1313/posts/10-functional-syntax-holding-it-back/" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/index.7e915884f3dd6d57e42096f9ebaa8c2c1bce67d7b52260cc1f09af3ab6af714a.css">
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+</head>
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
+  <header class="flex flex-none justify-center z-10">
+    <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl h-12 mt-3">
+  <div class="flex-none ml-2 md:ml-0">
+    <a href="/" class="">
+      <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="/logo.png" alt="logo">
+    </a>
+  </div>
+  <div class="flex-1"></div>
+  <div class="flex-none">
+    
+
+
+
+<nav class="h-full static">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+    <span class="sr-only">Open main menu</span>
+    <i class="w-8 h-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+
+    </i>
+  </button>
+  <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    
+        <li id="post" class="">
+          <a class="block px-3 py-3 hover:text-emerald-600 text-emerald-600"
+            href="/posts/" title="Post">Post</a>
+        </li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+
+  </div>
+  
+  <div class="flex-none mx-1"></div>
+  
+  <div class="flex-none md:hidden">
+    <a href=/search/ class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+      <span class="sr-only">Search</span>
+      <i class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+    <path d="M21 21l-6 -6" />
+</svg>
+
+      </i>
+    </a>
+  </div>
+  <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
+    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="Toggle dark mode">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="Toggle dark mode">
+      <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
+        <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M12 5l0 .01"></path>
+   <path d="M17 7l0 .01"></path>
+   <path d="M19 12l0 .01"></path>
+   <path d="M17 17l0 .01"></path>
+   <path d="M12 19l0 .01"></path>
+   <path d="M7 17l0 .01"></path>
+   <path d="M5 12l0 .01"></path>
+   <path d="M7 7l0 .01"></path>
+</svg>
+
+        </i>
+        <i class="h-6 w-6 flex-none rounded-full place-self-center invisible peer-checked:group-[]:visible">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+   <path d="M19 11h2m-1 -1v2"></path>
+</svg>
+
+        </i>
+      </div>
+    </label>
+  </div>
+</div>
+
+  </header>
+  <main class="flex flex-auto justify-center">
+    
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <div class="flex flex-col gap-y-3 p-6 mt-6 mx-2 md:mx-0 rounded-lg shadow-md bg-white dark:bg-gray-700">
+    <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+      <a href="/posts/10-functional-syntax-holding-it-back/">Is syntax holding back functional programming?</a>
+    </h1>
+
+    
+    
+
+
+    <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+  
+  
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path>
+   <path d="M16 3v4"></path>
+   <path d="M8 3v4"></path>
+   <path d="M4 11h16"></path>
+   <path d="M11 15h1"></path>
+   <path d="M12 15v3"></path>
+</svg>
+
+    </i>
+    <time datetime="2024-05-29T20:30:30&#43;01:00">
+      2024-05-29
+    </time>
+  </div>
+
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hourglass-high" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M6.5 7h11"></path>
+   <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+   <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
+</svg>
+
+    </i>
+    <span>
+      8 minutes to read
+    </span>
+  </div>
+</div>
+
+
+    
+      
+    
+
+    <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+      <p>Recently I&rsquo;ve been looking at a few programming languages and in particular the functional ones and noticed that there appears to be a trend with them. While having some very good benefits and being quite the joy to use and write in, they seem to be not very popular. As you may have guessed from the title, I think a large part of this is down to syntax and I&rsquo;d like to try and explain why I think this may be. I&rsquo;d Ike to preface it with it not being the only reason I think but it&rsquo;s for sure one of my larger ideas as to why this may be</p>
+<p>For reference, this post is purely a food for thought kind of post and is not an argument in any way.</p>
+<h2 id="most-popular-languages-are-also-the-most-c-like-coincidence">Most Popular Languages are also the most C-Like. Coincidence?</h2>
+<p>Using the website <a href="https://tjpalmer.github.io/languish/" target="_blank" rel="noopener">Languish</a>
+ as a means of measuring popularity, the top 8 (as of writing this) are as follows:</p>
+<ul>
+<li>Python</li>
+<li>JavaScript</li>
+<li>Typescript</li>
+<li>Java</li>
+<li>C++</li>
+<li>C#</li>
+<li>Go</li>
+<li>C</li>
+</ul>
+<p>All of this with the exception of Python (which I imagine is coming from data science and the ever growing popularity of AI) have their basis in a C-Like way of writing code (including unsurprisingly, C&hellip;).</p>
+<p>My definition of a C-like language is one that:</p>
+<ul>
+<li>Uses braces <code>{}</code> to denote scope.</li>
+<li>Uses parenthesis <code>()</code> to denote function calls.</li>
+<li>Use of an explicit <code>return</code> keyword.</li>
+<li>Has type definitions used in the function signatures.</li>
+</ul>
+<p>These all check at least 3 of those 4 boxes and that is enough for me to call them C-Like. If you want to take away from this that they are mostly languages that encourage the use of Object-Oriented design then you may be on the right track with this article.</p>
+<p>A final point on these languages is that none of them will claim to have come from a functional background and while some may have some functional features in their modern incarnations it was not a thought when they first came about.</p>
+<h4 id="side-note-meta-language-ml-syntax">Side Note: Meta-Language (ML) Syntax</h4>
+<p>ML style languages are what I would name the opposite of C-like and they tend to have the following attributes:</p>
+<ul>
+<li>Use whitespace indentation to denote blocks.</li>
+<li>Heavier use on type inference to determine types.</li>
+<li>No parenthesis to call functions, opting for a whitespace delimited list of arguments instead.</li>
+<li>Uses the last evaluated expression as a return without the need of a specific return keyword.</li>
+</ul>
+<h2 id="most-popular-languages-with-functional-concepts">Most popular languages with Functional Concepts</h2>
+<p>To further the evidence that a C-like syntax is prevalent, I&rsquo;d like to shift my attention to a couple of other popular languages that have been designed with some of these functional programming concepts all built in from the get-go of their design.</p>
+<h3 id="scala">Scala</h3>
+<p>Scala is one of the most popular functional languages around and can be found at <a href="https://www.scala-lang.org/" target="_blank" rel="noopener">https://www.scala-lang.org/</a>
+.
+I suppose I should very much specify that when I am talking about Scala I am talking about <a href="https://docs.scala-lang.org/overviews/scala-book/introduction.html" target="_blank" rel="noopener">Scala versions 1 &amp; 2</a>
+ as <a href="https://docs.scala-lang.org/scala3/book/scala-features.html" target="_blank" rel="noopener">Scala 3</a>
+ has removed a lot of the syntax likeness to C that I am going to discuss. The fact that the language is still on a decline on the Languish website despite these changes only strengthens the argument I have about it.</p>
+<p>At the time of writing this, Scala sits at position 31 on the Languish website which is quite a feat given the 507 languages the page currently tracks (even if some are not proper programming languages). That is indeed quite the accomplishment however its syntax is very similar to Java. I would imagine that a large part of this is due to the language running on the JVM and needing to interop with Java code so adding some syntactical sugar over what Java is able to do would seem like a sensible way to bring the language to the masses of Java developers in the world.</p>
+<p>As a prime example of how Scala can make the code more concise, we can look at the following example of a data class (Only get properties and a constructor requiring all arguments)</p>
+<p>Java:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String firstName;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String lastName;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Person</span>(String firstName, String lastName) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> firstName;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lastName</span> <span style="color:#f92672">=</span> lastName;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getFirstName</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> firstName;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getLastName</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> lastName;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Scala:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scala" data-lang="scala"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span><span style="color:#f92672">(</span><span style="color:#66d9ef">val</span> firstName<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">String</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">val</span> lastName<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">String</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>As you can see, despite the conciseness, the syntax itself is still similar the that of the Java constructor and the C-like styling.
+If you would like to see more examples of this, have a Google for examples of Scala vs Java code and you can find many more examples where Scala just looks like a &lsquo;cleaner&rsquo; Java.</p>
+<h3 id="rust">Rust</h3>
+<p>Of course we need to speak about the elephant in the room here regarding a language with functional concepts built in from the start. Rust is a systems programming language that has taken the world by storm and is used in the Firefox&rsquo;s JavaScript and WebAssembly engine and has <a href="https://en.wikipedia.org/wiki/Rust_for_Linux" target="_blank" rel="noopener">made it into the Linux kernel</a>
+ along with Microsoft investing <a href="https://thenewstack.io/microsofts-1m-vote-of-confidence-in-rusts-future/" target="_blank" rel="noopener">one million dollars</a>
+ into the foundation behind it.
+Furthermore, This currently sits in position number 10 on the language and is a roaring success of a programming language.</p>
+<p>However, the compiler itself shows a telling story of how much the syntax (as well as familiarity with the language) can have a huge impact. Back in its first incarnation, the Rust compiler was written in <a href="https://ocaml.org/" target="_blank" rel="noopener">OCaml</a>
+ as can be seen <a href="https://github.com/rust-lang/rust/tree/ef75860a0a72f79f97216f8aaa5b388d98da6480/src/boot" target="_blank" rel="noopener">here</a>
+ in a commit from 2011, just before the compiler was re-written in Rust itself.</p>
+<p>Using the Github metrics graphs, from 2013 onwards, we see a sharp uptick in the number of contributors to the Rust compiler as shown by this graph.
+<div class="not-prose">
+<figure>
+    <img src="/functional-syntax/rust-contributer-graph.png"
+      alt="Rust Contributors Graph" 
+      loading="lazy"
+    >
+  </figure></div>
+</p>
+<p>Obviously this is not all just due to the syntax and probably has a large amount to do with people who were writing rust could now contribute but I would argue its that syntax that gave them the reason to learn Rust in the first place.</p>
+<h2 id="so-is-this-trend-going-to-continue">So is this trend going to continue?</h2>
+<p>I fully believe this trend is going to continue down this line and will continue to go in this direction and I have a couple of language examples to prove this.</p>
+<h3 id="zig">Zig</h3>
+<p>Zig is an up and coming language that while being in Beta, was deemed to be good enough to be used in two different fully fledged products known as <a href="https://tigerbeetle.com/" target="_blank" rel="noopener">Tigerbeetle</a>
+ and <a href="https://bun.sh/" target="_blank" rel="noopener">Bun</a>
+.</p>
+<p>Zig aims to be a systems level language similar to Rust listed above but with less guardrails around memory management making closer to being able to be a drop in replacement for C.
+Obviously coming from that domain will lead to the language trying to replicate C in its syntax and it does with the addition of some Functional features such as:</p>
+<ul>
+<li><a href="https://ziglang.org/documentation/0.13.0/#Errors" target="_blank" rel="noopener">Typed Errors</a>
+</li>
+<li><a href="https://ziglang.org/documentation/0.13.0/#Errors" target="_blank" rel="noopener">Unions and Tagged Unions</a>
+</li>
+<li><a href="https://ziglang.org/documentation/0.13.0/#Errors" target="_blank" rel="noopener">Exhaustive Switching</a>
+</li>
+</ul>
+<p>And this is just to name a few. However the uptake of Zig seems to lean furthermore into this idea of a C-like syntax will bring more people who are willing to try the language and make it more successful.</p>
+<h3 id="gleam">Gleam</h3>
+<p>Gleam is a really interesting language in that it uses the Erlang BEAM Virtual Machine. Erlang is a well known functional language that has been around for many many years (since 1986!) and currently sits at position 99 on the languish website, again a fairly notable achievement given it&rsquo;s functional and white-spaced nature.</p>
+<p>The reason I mention Erlang is because Gleam is a language that had it&rsquo;s Version 1.0 release on the 4th March 2024 and has skyrocketed up to position 174 in the Languish website. While that may not seem impressive, it still puts it in the top 50% of all languages tracked and it is less than double the language that was built for the platform it runs on! Not too shabby for a new language. But also if we take a look at a sample of Gleam code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gleam" data-lang="gleam"><span style="display:flex;"><span><span style="color:#f92672">import</span> gleam<span style="color:#f92672">/</span>io
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>  io<span style="color:#f92672">.</span><span style="color:#a6e22e">debug</span>(<span style="color:#a6e22e">double</span>(<span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">double</span>(a<span style="color:#f92672">:</span> <span style="color:#a6e22e">Int</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#960050;background-color:#1e0010">I</span>nt {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">multiply</span>(a, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">multiply</span>(a<span style="color:#f92672">:</span> <span style="color:#a6e22e">Int</span>, b<span style="color:#f92672">:</span> <span style="color:#a6e22e">Int</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#960050;background-color:#1e0010">I</span>nt {
+</span></span><span style="display:flex;"><span>  a <span style="color:#f92672">*</span> b
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>As you cam see, while not 100% on the C-like front, we still have the parenthesis for function arguments and the braces for denoting scope. This is for a pure functional language that is running on a VM built for a functional language and we still see parts of C trying to crawl back into the syntax.</p>
+<p>I suppose this is my final point on the matter of showing how languages continue to be driven by the syntax of C and how this syntax could be tied to the popularity of new programming languages.</p>
+<h2 id="not-to-say-ml-inspired-languages-arent-used">Not to say &ldquo;ML&rdquo; inspired languages aren&rsquo;t used</h2>
+<p>I should probably reiterate that non-C-like languages do 100% have a place in the world and can be very useful for particular scenarios, right tool for the job and all that. Furthermore, I&rsquo;d be amiss to not point out that the benefits functional languages can provide have made their cases shown in the form of some very large companies using these non-C-like languages and having great success with it. Examples of this include:</p>
+<ul>
+<li>Twitter uses Scala in it&rsquo;s &ldquo;Algorithm&rdquo; (<a href="https://github.com/twitter/the-algorithm" target="_blank" rel="noopener">https://github.com/twitter/the-algorithm</a>
+)</li>
+<li>Meta uses Haskell to filter out spam (<a href="https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/" target="_blank" rel="noopener">https://engineering.fb.com/2015/06/26/security/fighting-spam-with-haskell/</a>
+)</li>
+<li>Jane Street use OCaml for &hellip;well everything&hellip; (<a href="https://blog.janestreet.com/why-ocaml/" target="_blank" rel="noopener">https://blog.janestreet.com/why-ocaml/</a>
+)</li>
+</ul>
+<h2 id="final-tidbit">Final tidbit</h2>
+<p>As a final tidbit of information, I think the reason for the above is due to the rise of Object-Oriented programming and it&rsquo;s tendency to be C-like with a lot of them being C derivatives.
+Functional programming is less popular and for more on that topic I would point you to this great talk be Richard Feldman, the creator of the Roc programming language (another language with a non-c-like syntax).
+<a href="https://youtu.be/QyJZzq0v7Z4?si=nIQjntdT_2Rvshsx" target="_blank" rel="noopener">https://youtu.be/QyJZzq0v7Z4?si=nIQjntdT_2Rvshsx</a>
+ - Richard Feldman - Why isn&rsquo;t functional programming the norm.</p>
+<p>Thank you for reading, any comments or questions please reach out to me on my Github.</p>
+
+    </article>
+
+    
+
+
+
+  </div>
+</div>
+
+  </main>
+  <footer class="flex flex-none justify-center">
+    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row">
+    
+  
+  
+    <a href="https://github.com/grab-a-byte/" target="_blank" title="Github" class="flex flex-row mr-2">
+      <span class="hidden">Github</span>
+      <i class="h-6 w-6 flex-none"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+</svg>
+ </i>
+    </a>
+  
+  
+
+
+  </div>
+  <div class="grow"></div>
+  <div class="flex flex-row">
+    <i class="h-6 w-6 flex-none"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+   <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
+</svg>
+</i> 2023 - 2024 
+    
+  </div>
+  
+  <div class="flex flex-row">
+    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">
+      Powered by <a href="https://gohugo.io" target="_blank" rel="noopener" class="underline">Hugo</a> <span class="text-red-600">&hearts;</span> <a href="https://github.com/tomowang/hugo-theme-tailwind" target="_blank" rel="noopener" class="underline">Tailwind</a>
+    </span>
+  </div>
+  
+</section>
+
+  </footer>
+  <script src="/main.js"></script>
+
+<div class="hidden top-1 right-1" id="code-copy">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+  <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+</svg>
+
+  </i>
+</div>
+<div class="hidden top-1 right-1" id="code-copy-done">
+  <i class="h-6 w-6 block">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 12l5 5l10 -10" />
+</svg>
+
+  </i>
+</div><script src="/code-copy.js"></script>
+
+
+
+
+
+</body>
+</html>

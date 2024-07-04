@@ -2,122 +2,136 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Adam Parker&#39;s Blog</title>
-    <link>https://example.org/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Adam Parker&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 29 Aug 2020 22:18:08 +0000</lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 May 2024 20:30:30 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Is syntax holding back functional programming?</title>
+      <link>http://localhost:1313/posts/10-functional-syntax-holding-it-back/</link>
+      <pubDate>Wed, 29 May 2024 20:30:30 +0100</pubDate>
+      <guid>http://localhost:1313/posts/10-functional-syntax-holding-it-back/</guid>
+      <description>Recently I&amp;rsquo;ve been looking at a few programming languages and in particular the functional ones and noticed that there appears to be a trend with them. While having some very good benefits and being quite the joy to use and write in, they seem to be not very popular. As you may have guessed from the title, I think a large part of this is down to syntax and I&amp;rsquo;d like to try and explain why I think this may be.</description>
+    </item>
     <item>
       <title>Dotnet Interop: C# and F# Pt. 3</title>
-      <link>https://example.org/posts/9-dotnet-interop-cs-fs-pt3/</link>
+      <link>http://localhost:1313/posts/9-dotnet-interop-cs-fs-pt3/</link>
       <pubDate>Sat, 29 Aug 2020 22:18:08 +0000</pubDate>
-      <guid>https://example.org/posts/9-dotnet-interop-cs-fs-pt3/</guid>
+      <guid>http://localhost:1313/posts/9-dotnet-interop-cs-fs-pt3/</guid>
       <description>So over the last couple of posts, we’ve looked at what does work well in C# from F#, and most of it seems to go pretty smoothly. But there are occasions where the languages refuse to play nice with each other. That’s what we’ll be discussing in this final post.&#xA;Options Option in F# are a way to get around the idea of null by providing two ‘sub-types’ called Some and None.</description>
     </item>
     <item>
       <title>Dotnet Interop: C# and F# Pt. 2</title>
-      <link>https://example.org/posts/8-dotnet-interop-cs-fs-pt2/</link>
+      <link>http://localhost:1313/posts/8-dotnet-interop-cs-fs-pt2/</link>
       <pubDate>Fri, 03 Jul 2020 22:09:47 +0000</pubDate>
-      <guid>https://example.org/posts/8-dotnet-interop-cs-fs-pt2/</guid>
+      <guid>http://localhost:1313/posts/8-dotnet-interop-cs-fs-pt2/</guid>
       <description>Continuing on from where we left off last time, we will try to cover off the rest of F#’s features that play really well and simply when being consumed from a C# codebase.&#xA;Values F# can have values places directly inside modules, almost ‘global’ values in the module. See an example below :-&#xA;module FunctionalParadigms let aNumber = 5 As we know from the last post, modules expose themselves as static classes in C#.</description>
     </item>
     <item>
       <title>Dotnet Interop:- C# and F#</title>
-      <link>https://example.org/posts/7-dotnet-interop-cs-fs/</link>
+      <link>http://localhost:1313/posts/7-dotnet-interop-cs-fs/</link>
       <pubDate>Wed, 29 Apr 2020 22:04:54 +0000</pubDate>
-      <guid>https://example.org/posts/7-dotnet-interop-cs-fs/</guid>
+      <guid>http://localhost:1313/posts/7-dotnet-interop-cs-fs/</guid>
       <description>What makes F# special? In the Dotnet world, F# stand out as being the Functional based language. This might sound strange, and I on’t have time to go into the full difference between Function and Object-Oriented languages and paradigms here, please do a google if you wish to learn more.&#xA;Some of the main features of F# that are relevant to this series are as follows:-&#xA;Higher Order Functions Modules Records Sequences Discriminated Unions Options I put them in this order for a reason.</description>
     </item>
     <item>
       <title>Dotnet Interop:-  C# and Visual Basic</title>
-      <link>https://example.org/posts/6-dotnet-interop-cs-vb/</link>
+      <link>http://localhost:1313/posts/6-dotnet-interop-cs-vb/</link>
       <pubDate>Wed, 01 Apr 2020 20:47:35 +0000</pubDate>
-      <guid>https://example.org/posts/6-dotnet-interop-cs-vb/</guid>
+      <guid>http://localhost:1313/posts/6-dotnet-interop-cs-vb/</guid>
       <description>This is Part 1 in my series of Blog Posts on DotNet interop.&#xA;Why Visual Basic? I decided to use visual basic as my first way to show Interop as C# and Visual Basic both share the same programming paradigm of object orientation.&#xA;A sample of the languages! Below I have snippets of two classes which are mirrors of each other in both Visual Basic and C#.&#xA;Visual Basic C# (Those more astute of you will have notice Visual Basic’s superiority with a lack of Semi-Colons and Brackets …)</description>
     </item>
     <item>
       <title>Dotnet  Interop</title>
-      <link>https://example.org/posts/5-dotnet-interop/</link>
+      <link>http://localhost:1313/posts/5-dotnet-interop/</link>
       <pubDate>Sat, 29 Feb 2020 19:38:35 +0000</pubDate>
-      <guid>https://example.org/posts/5-dotnet-interop/</guid>
+      <guid>http://localhost:1313/posts/5-dotnet-interop/</guid>
       <description>What is DotNet? DotNet is a whole stack. It can get very confusing when talking about .NET and what it is. The main part which actually makes all of the following possible is the .NET runtime.&#xA;What this runtime is in simple terms, is a layer which takes the compiled code, and runs it on the machine. It managed to do this as it reads what is know as Intermediate Language (IL) and translates this to be ran natively on the machine.</description>
     </item>
     <item>
       <title>Xamarin Shell for Web Developers</title>
-      <link>https://example.org/posts/4-xamarin-shell-for-web-developers/</link>
+      <link>http://localhost:1313/posts/4-xamarin-shell-for-web-developers/</link>
       <pubDate>Mon, 27 Jan 2020 17:18:40 +0100</pubDate>
-      <guid>https://example.org/posts/4-xamarin-shell-for-web-developers/</guid>
+      <guid>http://localhost:1313/posts/4-xamarin-shell-for-web-developers/</guid>
       <description>Coming from web development, I have become very used to and familiar with the MVC architecture for development. It allows for good decoupling of components and also allows for excellent use of Dependency Injection (DI). Having moved to start teaching myself mobile app development through Xamarin Forms , I found the view centric approach to navigation very odd and strange. It was tightly coupled to the framework and I spent hours trying to come up with the perfect navigation service that was generic enough to use.</description>
     </item>
     <item>
       <title>Can contributing to open source be easy?</title>
-      <link>https://example.org/posts/2-contributing-to-open-source/</link>
+      <link>http://localhost:1313/posts/2-contributing-to-open-source/</link>
       <pubDate>Sun, 16 Jun 2019 23:38:30 +0100</pubDate>
-      <guid>https://example.org/posts/2-contributing-to-open-source/</guid>
+      <guid>http://localhost:1313/posts/2-contributing-to-open-source/</guid>
       <description>A very leading question in the title and the answer is, of course! Nobody said you had to commit code to be part of an open source project, many people commit changes to documentation and this is where my second open source pull request(PR)/ commit lies. I was recently working on a project which is using the Prism Library (https://github.com/PrismLibrary) , a MVVM Framework for Xamarin Forms and WPF (Windows Presentation Foundation).</description>
     </item>
     <item>
       <title>My First Open Source Pull Request</title>
-      <link>https://example.org/posts/1-my-first-pull-request/</link>
+      <link>http://localhost:1313/posts/1-my-first-pull-request/</link>
       <pubDate>Thu, 30 May 2019 09:03:20 -0800</pubDate>
-      <guid>https://example.org/posts/1-my-first-pull-request/</guid>
+      <guid>http://localhost:1313/posts/1-my-first-pull-request/</guid>
       <description>I always thought open source would be a scary world and the start of it was. I was shown a nice little website named First Timers Only ( https://www.firsttimersonly.com/ ), and this was my entry point. This lead me to the UpForGrabs page and I started filtering by what I knew, .NET. (Yes I skipped first contributions, if I don’t know how to do a pull request after working in industry for a year, I may be in the wrong profession)</description>
     </item>
     <item>
       <title></title>
-      <link>https://example.org/search/_index.es/</link>
+      <link>http://localhost:1313/search/_index.es/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/search/_index.es/</guid>
+      <guid>http://localhost:1313/search/_index.es/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://example.org/search/_index.fr/</link>
+      <link>http://localhost:1313/search/_index.fr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/search/_index.fr/</guid>
+      <guid>http://localhost:1313/search/_index.fr/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://example.org/search/_index.hi/</link>
+      <link>http://localhost:1313/search/_index.hi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/search/_index.hi/</guid>
+      <guid>http://localhost:1313/search/_index.hi/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://example.org/search/_index.jp/</link>
+      <link>http://localhost:1313/search/_index.jp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/search/_index.jp/</guid>
+      <guid>http://localhost:1313/search/_index.jp/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://example.org/search/_index.pl/</link>
+      <link>http://localhost:1313/search/_index.pl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/search/_index.pl/</guid>
+      <guid>http://localhost:1313/search/_index.pl/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://example.org/search/_index.ru/</link>
+      <link>http://localhost:1313/search/_index.ru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/search/_index.ru/</guid>
+      <guid>http://localhost:1313/search/_index.ru/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://example.org/search/_index.zh-cn/</link>
+      <link>http://localhost:1313/search/_index.zh-cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/search/_index.zh-cn/</guid>
+      <guid>http://localhost:1313/search/_index.zh-cn/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>TODO: Insert Github Link&#xA;TODO: Insert LinkedIn Link</description>
     </item>
     <item>
       <title>Remove Cached Report Data Ssrs</title>
-      <link>https://example.org/posts/3-remove-cached-report-data-ssrs/</link>
+      <link>http://localhost:1313/posts/3-remove-cached-report-data-ssrs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/3-remove-cached-report-data-ssrs/</guid>
+      <guid>http://localhost:1313/posts/3-remove-cached-report-data-ssrs/</guid>
       <description>I was working with a SQL Server Reporting Services (SSRS) Report the other day and found myself trying to work with some data changes while writing the report to ensure the report was behaving as expected. Initially, nothing on the report changed even though I had changed the data, I found this odd and thought I might’ve been pointing at the wrong database. After a bit of googling, I found that report data get cached after the first run of previewing a report.</description>
     </item>
   </channel>

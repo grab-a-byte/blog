@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>About :: Adam Parker&#39;s Blog - Example site for hugo-theme-tailwind</title>
   
-<title>Search</title>
-
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta
   name="description"
-  content=""
+  content="TODO: Insert Github Link
+TODO: Insert LinkedIn Link"
 />
 <meta
   name="keywords"
   content="hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
 />
 <meta name="robots" content="noodp" />
-<meta property="og:url" content="http://localhost:1313/search/">
+<meta property="og:url" content="http://localhost:1313/about/">
   <meta property="og:site_name" content="Adam Parker&#39;s Blog">
-  <meta property="og:title" content="Adam Parker&#39;s Blog">
+  <meta property="og:title" content="About">
+  <meta property="og:description" content="&#39;Time is an illusion, lunch doubly so&#39; - Douglas Adams">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Adam Parker&#39;s Blog">
+  <meta name="twitter:title" content="About">
+  <meta name="twitter:description" content="&#39;Time is an illusion, lunch doubly so&#39; - Douglas Adams">
 
 
-<link rel="canonical" href="http://localhost:1313/search/" />
+<link rel="canonical" href="http://localhost:1313/about/" />
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="stylesheet" href="/css/index.7e915884f3dd6d57e42096f9ebaa8c2c1bce67d7b52260cc1f09af3ab6af714a.css">
@@ -42,7 +44,7 @@
 
 
 
-  <link rel="preload" href="/search/index.json" as="fetch" crossorigin="anonymous">
+  
 </head>
 <body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
   <header class="flex flex-none justify-center z-10">
@@ -139,54 +141,58 @@
   <main class="flex flex-auto justify-center">
     
 <div class="w-full max-w-4xl lg:max-w-5xl">
-  <form class="my-4 mx-2 md:mx-0" action="./" method="get">
-    <div class="flex">
-      <input type="text" name="search" id="search-input" required placeholder="Search..." class="rounded-none rounded-s-lg border border-gray-300 text-slate-800 focus:outline-none focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-3  dark:bg-slate-700 dark:border-slate-600 dark:placeholder-slate-400 dark:text-slate-200 dark:focus:ring-blue-500 dark:focus:border-blue-500">
-      <button class="inline-flex items-center px-3 text-sm text-slate-900 bg-slate-200 border border-e-0 border-gray-300 rounded-e-lg dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
-        <i class="h-6 w-6 flex-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-    <path d="M21 21l-6 -6" />
+  <div class="flex flex-col gap-y-3 p-6 mt-6 mx-2 md:mx-0 rounded-lg shadow-md bg-white dark:bg-gray-700">
+    <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+      <a href="/about/">About</a>
+    </h1>
+
+    
+    <h2 class="my-4 text-large text-slate-600 dark:text-slate-300">
+      &lsquo;Time is an illusion, lunch doubly so&rsquo; - Douglas Adams
+    </h2>
+    
+    
+
+
+    <div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row text-base gap-x-1">
+    <i class="h-6 w-6 flex-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hourglass-high" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M6.5 7h11"></path>
+   <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z"></path>
+   <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z"></path>
 </svg>
 
-        </i>
-      </button>
-    </div>
-  </form>
-  <div class="w-full max-w-4xl lg:max-w-5xl">
-    <section class="flex flex-col w-full" id="search-result"></section>
-    <section class="flex flex-col w-full">
-      <p id="search-result-empty" class="hidden mx-2 md:mx-0 text-lg font-semibold text-slate-800 dark:text-slate-200">No result found.</p>
-    </section>
+    </i>
+    <span>
+      One minute to read
+    </span>
   </div>
 </div>
 
-<div class="hidden" id="tag-icon">
-  <i class="h-5 w-5 flex-none">
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M5 9l14 0"></path>
-   <path d="M5 15l14 0"></path>
-   <path d="M11 4l-4 16"></path>
-   <path d="M17 4l-4 16"></path>
-</svg>
 
-  </i>
+    
+      
+      <section class="prose prose-slate dark:prose-invert w-full max-w-4xl lg:max-w-5xl mt-6">
+        <h2>Table of Contents</h2>
+        <aside><nav id="TableOfContents"></nav></aside>
+      </section>
+      
+    
+
+    <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+      <p>TODO: Insert Github Link</p>
+<p>TODO: Insert LinkedIn Link</p>
+
+    </article>
+
+    
+
+
+
+  </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1"></script>
-<script src="/js/doT.min.js"></script>
-
-<script type="text/javascript">
-  var searchOptions = {
-    summaryInclude:  180 ,
-    minMatchCharLength:  2 ,
-    threshold:  0.3 ,
-  };
-</script><script src="/search.05daba52664889fa2ade18f8f9ad0d59d4902ed096aac71878d1b194401aa7b8.js"></script>
-
 
   </main>
   <footer class="flex flex-none justify-center">
