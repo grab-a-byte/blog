@@ -123,7 +123,7 @@ fn multiply(a: Int, b: Int) -> Int {
 }
 ```
 
-As you cam see, while not 100% on the C-like front, we still have the parenthesis for function arguments and the braces for denoting scope. This is for a pure functional language that is running on a VM built for a functional language and we still see parts of C trying to crawl back into the syntax. 
+As you can see, while not 100% on the C-like front, we still have the parenthesis for function arguments and the braces for denoting scope. This is for a pure functional language that is running on a VM built for a functional language and we still see parts of C trying to crawl back into the syntax. 
 
 I suppose this is my final point on the matter of showing how languages continue to be driven by the syntax of C and how this syntax could be tied to the popularity of new programming languages.
 
