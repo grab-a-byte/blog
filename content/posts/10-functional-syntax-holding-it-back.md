@@ -138,7 +138,7 @@ I should probably reiterate that non-C-like languages do 100% have a place in th
 
 ## Final tidbit
 As a final tidbit of information, I think the reason for the above is due to the rise of Object-Oriented programming and it's tendency to be C-like with a lot of them being C derivatives.
-Functional programming is less popular and for more on that topic I would point you to this great talk be Richard Feldman, the creator of the Roc programming language (another language with a non-c-like syntax).
+Functional programming is less popular and for more on that topic I would point you to this great talk be Richard Feldman, the creator of the Roc programming language (another language with a non-C-like syntax).
 https://youtu.be/QyJZzq0v7Z4?si=nIQjntdT_2Rvshsx - Richard Feldman - Why isn't functional programming the norm.
 
 Thank you for reading, any comments or questions please reach out to me on my Github.
