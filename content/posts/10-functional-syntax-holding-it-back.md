@@ -1,11 +1,10 @@
 ---
 title: 'Is syntax holding back functional programming?'
-date: 2024-05-29T20:30:30+01:00
-draft: true
+date: 2024-07-12T20:30:30+01:00
+draft: false
 toc: false
 ---
-
-Recently I've been looking at a few programming languages and in particular the functional ones and noticed that there appears to be a trend with them. While having some very good benefits and being quite the joy to use and write in, they seem to be not very popular. As you may have guessed from the title, I think a large part of this is down to syntax and I'd like to try and explain why I think this may be. I'd Ike to preface it with it not being the only reason I think but it's for sure one of my larger ideas as to why this may be
+While looking through many programming languages over the years, I have come to appreciate the ones which are based around the theory of functional programming. I find they are a joy to write and allow for some very expressive code in few characters. However, when looking at the popularity of many of these languages I've noticed their popularity seems to be low. As you may have guessed from the title, I think a large part of this is down to syntax and I'd like to try and explain why I think this may be. I'd Ike to preface it with it not being the only reason I think but it's one of the primary reasons as to why this may be.
 
 For reference, this post is purely a food for thought kind of post and is not an argument in any way.
 
@@ -36,7 +35,7 @@ A final point on these languages is that none of them will claim to have come fr
 #### Side Note: Meta-Language (ML) Syntax
 ML style languages are what I would name the opposite of C-like and they tend to have the following attributes:
 - Use whitespace indentation to denote blocks.
-- Heavier use on type inference to determine types.
+- Heavier use on type inference to determine types (leading to less type definitions being written).
 - No parenthesis to call functions, opting for a whitespace delimited list of arguments instead.
 - Uses the last evaluated expression as a return without the need of a specific return keyword.
 

@@ -6,14 +6,14 @@
     <description>Recent content on Adam Parker&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 May 2024 20:30:30 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2024 20:30:30 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Is syntax holding back functional programming?</title>
       <link>http://localhost:1313/posts/10-functional-syntax-holding-it-back/</link>
-      <pubDate>Wed, 29 May 2024 20:30:30 +0100</pubDate>
+      <pubDate>Fri, 12 Jul 2024 20:30:30 +0100</pubDate>
       <guid>http://localhost:1313/posts/10-functional-syntax-holding-it-back/</guid>
-      <description>Recently I&amp;rsquo;ve been looking at a few programming languages and in particular the functional ones and noticed that there appears to be a trend with them. While having some very good benefits and being quite the joy to use and write in, they seem to be not very popular. As you may have guessed from the title, I think a large part of this is down to syntax and I&amp;rsquo;d like to try and explain why I think this may be.</description>
+      <description>While looking through many programming languages over the years, I have come to appreciate the ones which are based around the theory of functional programming. I find they are a joy to write and allow for some very expressive code in few characters. However, when looking at the popularity of many of these languages I&amp;rsquo;ve noticed their popularity seems to be low. As you may have guessed from the title, I think a large part of this is down to syntax and I&amp;rsquo;d like to try and explain why I think this may be.</description>
     </item>
     <item>
       <title>Dotnet Interop: C# and F# Pt. 3</title>
