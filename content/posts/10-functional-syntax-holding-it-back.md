@@ -39,7 +39,7 @@ ML style languages are what I would name the opposite of C-like and they tend to
 - No parenthesis to call functions, opting for a whitespace delimited list of arguments instead.
 - Uses the last evaluated expression as a return without the need of a specific return keyword.
 
-## Most popular languages with Functional Concepts
+## Most Popular Languages with Functional Concepts
 To further the evidence that a C-like syntax is prevalent, I'd like to shift my attention to a couple of other popular languages that have been designed with some of these functional programming concepts all built in from the get-go of their design.
 
 ### Scala
