@@ -4,7 +4,7 @@ date: 2024-07-12T20:30:30+01:00
 draft: false
 toc: false
 ---
-While looking through many programming languages over the years, I have come to appreciate the ones which are based around the theory of functional programming. I find they are a joy to write and allow for some very expressive code in few characters. However, when looking at the popularity of many of these languages I've noticed their popularity seems to be low. As you may have guessed from the title, I think a large part of this is down to syntax and I'd like to try and explain why I think this may be. I'd Ike to preface it with it not being the only reason I think but it's one of the primary reasons as to why this may be.
+While looking through many programming languages over the years, I have come to appreciate the ones which are based around the theory of functional programming. I find they are a joy to write and allow for some very expressive code in few characters. However, when looking at the popularity of many of these languages I've noticed their popularity seems to be low. As you may have guessed from the title, I think a large part of this is down to syntax and I'd like to try and explain why I think this may be. I'd like to preface it with it not being the only reason I think but it's one of the primary reasons as to why this may be.
 
 For reference, this post is purely a food for thought kind of post and is not an argument in any way.
 
