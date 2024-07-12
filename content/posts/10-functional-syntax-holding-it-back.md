@@ -91,9 +91,9 @@ Obviously this is not all just due to the syntax and probably has a large amount
 I fully believe this trend is going to continue down this line and will continue to go in this direction and I have a couple of language examples to prove this.
 
 ### Zig
-Zig is an up and coming language that while being in Beta, was deemed to be good enough to be used in two different fully fledged products known as [Tigerbeetle](https://tigerbeetle.com/) and [Bun](https://bun.sh/).
+Zig is an up-and-coming language that while being in Beta, was deemed to be good enough to be used in two different fully fledged products known as [Tigerbeetle](https://tigerbeetle.com/) and [Bun](https://bun.sh/).
 
-Zig aims to be a systems level language similar to Rust listed above but with less guardrails around memory management making closer to being able to be a drop in replacement for C.
+Zig aims to be a systems level language similar to Rust listed above but with less guardrails around memory management making it closer to being able to be a drop in replacement for C.
 Obviously coming from that domain will lead to the language trying to replicate C in its syntax and it does with the addition of some Functional features such as:
 
 - [Typed Errors](https://ziglang.org/documentation/0.13.0/#Errors)
