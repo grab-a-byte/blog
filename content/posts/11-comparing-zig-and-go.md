@@ -1,7 +1,7 @@
 ---
-title: "Comparing Zig and Go"
-date: 2024-07-12T20:30:30+01:00
-draft: false
+title: 'Comparing Zig and Go'
+date: 2025-02-01T20:30:30+01:00
+draft: true
 toc: false
 ---
 

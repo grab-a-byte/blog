@@ -2,81 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Adam Parker&#39;s Blog</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://example.org/posts/</link>
     <description>Recent content in Posts on Adam Parker&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 May 2024 20:30:30 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Jul 2024 20:30:30 +0100</lastBuildDate>
+    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Is syntax holding back functional programming?</title>
-      <link>http://localhost:1313/posts/10-functional-syntax-holding-it-back/</link>
-      <pubDate>Wed, 29 May 2024 20:30:30 +0100</pubDate>
-      <guid>http://localhost:1313/posts/10-functional-syntax-holding-it-back/</guid>
-      <description>Recently I&amp;rsquo;ve been looking at a few programming languages and in particular the functional ones and noticed that there appears to be a trend with them. While having some very good benefits and being quite the joy to use and write in, they seem to be not very popular. As you may have guessed from the title, I think a large part of this is down to syntax and I&amp;rsquo;d like to try and explain why I think this may be.</description>
+      <link>https://example.org/posts/10-functional-syntax-holding-it-back/</link>
+      <pubDate>Fri, 12 Jul 2024 20:30:30 +0100</pubDate>
+      <guid>https://example.org/posts/10-functional-syntax-holding-it-back/</guid>
+      <description>&lt;p&gt;While looking through many programming languages over the years, I have come to appreciate the ones which are based around the theory of functional programming. I find they are a joy to write and allow for some very expressive code in few characters. However, when looking at the popularity of many of these languages I&amp;rsquo;ve noticed their popularity seems to be low. As you may have guessed from the title, I think a large part of this is down to syntax and I&amp;rsquo;d like to try and explain why I think this may be. I&amp;rsquo;d like to preface it with it not being the only reason I think but it&amp;rsquo;s one of the primary reasons as to why this may be.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dotnet Interop: C# and F# Pt. 3</title>
-      <link>http://localhost:1313/posts/9-dotnet-interop-cs-fs-pt3/</link>
+      <link>https://example.org/posts/9-dotnet-interop-cs-fs-pt3/</link>
       <pubDate>Sat, 29 Aug 2020 22:18:08 +0000</pubDate>
-      <guid>http://localhost:1313/posts/9-dotnet-interop-cs-fs-pt3/</guid>
-      <description>So over the last couple of posts, we’ve looked at what does work well in C# from F#, and most of it seems to go pretty smoothly. But there are occasions where the languages refuse to play nice with each other. That’s what we’ll be discussing in this final post.&#xA;Options Option in F# are a way to get around the idea of null by providing two ‘sub-types’ called Some and None.</description>
+      <guid>https://example.org/posts/9-dotnet-interop-cs-fs-pt3/</guid>
+      <description>&lt;p&gt;So over the last couple of posts, we’ve looked at what does work well in C# from F#, and most of it seems to go pretty smoothly. But there are occasions where the languages refuse to play nice with each other. That’s what we’ll be discussing in this final post.&lt;/p&gt;&#xA;&lt;h2 id=&#34;options&#34;&gt;Options&lt;/h2&gt;&#xA;&lt;p&gt;Option in F# are a way to get around the idea of null by providing two ‘sub-types’ called Some and None. Imagine trying to parse an Int from a String, if you provide a valid string such as “42”, it succeeds and the method should return Some(42), if you provided a invalid string, it may return none to indicate that it has indeed failed. An example being as follows:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dotnet Interop: C# and F# Pt. 2</title>
-      <link>http://localhost:1313/posts/8-dotnet-interop-cs-fs-pt2/</link>
+      <link>https://example.org/posts/8-dotnet-interop-cs-fs-pt2/</link>
       <pubDate>Fri, 03 Jul 2020 22:09:47 +0000</pubDate>
-      <guid>http://localhost:1313/posts/8-dotnet-interop-cs-fs-pt2/</guid>
-      <description>Continuing on from where we left off last time, we will try to cover off the rest of F#’s features that play really well and simply when being consumed from a C# codebase.&#xA;Values F# can have values places directly inside modules, almost ‘global’ values in the module. See an example below :-&#xA;module FunctionalParadigms let aNumber = 5 As we know from the last post, modules expose themselves as static classes in C#.</description>
+      <guid>https://example.org/posts/8-dotnet-interop-cs-fs-pt2/</guid>
+      <description>&lt;p&gt;Continuing on from where we left off last time, we will try to cover off the rest of F#’s features that play really well and simply when being consumed from a C# codebase.&lt;/p&gt;&#xA;&lt;h2 id=&#34;values&#34;&gt;Values&lt;/h2&gt;&#xA;&lt;p&gt;F# can have values places directly inside modules, almost ‘global’ values in the module. See an example below :-&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;module&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;FunctionalParadigms&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;aNumber&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As we know from the last post, modules expose themselves as static classes in C#. As such, this value just becomes a static readonly property of that static class. As such, C# can consume it as follows.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dotnet Interop:- C# and F#</title>
-      <link>http://localhost:1313/posts/7-dotnet-interop-cs-fs/</link>
+      <link>https://example.org/posts/7-dotnet-interop-cs-fs/</link>
       <pubDate>Wed, 29 Apr 2020 22:04:54 +0000</pubDate>
-      <guid>http://localhost:1313/posts/7-dotnet-interop-cs-fs/</guid>
-      <description>What makes F# special? In the Dotnet world, F# stand out as being the Functional based language. This might sound strange, and I on’t have time to go into the full difference between Function and Object-Oriented languages and paradigms here, please do a google if you wish to learn more.&#xA;Some of the main features of F# that are relevant to this series are as follows:-&#xA;Higher Order Functions Modules Records Sequences Discriminated Unions Options I put them in this order for a reason.</description>
+      <guid>https://example.org/posts/7-dotnet-interop-cs-fs/</guid>
+      <description>&lt;h2 id=&#34;what-makes-f-special&#34;&gt;What makes F# special?&lt;/h2&gt;&#xA;&lt;p&gt;In the Dotnet world, F# stand out as being the Functional based language. This might sound strange, and I on’t have time to go into the full difference between Function and Object-Oriented languages and paradigms here, please do a google if you wish to learn more.&lt;/p&gt;&#xA;&lt;p&gt;Some of the main features of F# that are relevant to this series are as follows:-&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Higher Order Functions&lt;/li&gt;&#xA;&lt;li&gt;Modules&lt;/li&gt;&#xA;&lt;li&gt;Records&lt;/li&gt;&#xA;&lt;li&gt;Sequences&lt;/li&gt;&#xA;&lt;li&gt;Discriminated Unions&lt;/li&gt;&#xA;&lt;li&gt;Options&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I put them in this order for a reason. This is the list I will be discussing and showing how the Dotnet runtime allows these two languages of different paradigms to happily (in most cases) work together.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dotnet Interop:-  C# and Visual Basic</title>
-      <link>http://localhost:1313/posts/6-dotnet-interop-cs-vb/</link>
+      <link>https://example.org/posts/6-dotnet-interop-cs-vb/</link>
       <pubDate>Wed, 01 Apr 2020 20:47:35 +0000</pubDate>
-      <guid>http://localhost:1313/posts/6-dotnet-interop-cs-vb/</guid>
-      <description>This is Part 1 in my series of Blog Posts on DotNet interop.&#xA;Why Visual Basic? I decided to use visual basic as my first way to show Interop as C# and Visual Basic both share the same programming paradigm of object orientation.&#xA;A sample of the languages! Below I have snippets of two classes which are mirrors of each other in both Visual Basic and C#.&#xA;Visual Basic C# (Those more astute of you will have notice Visual Basic’s superiority with a lack of Semi-Colons and Brackets …)</description>
+      <guid>https://example.org/posts/6-dotnet-interop-cs-vb/</guid>
+      <description>&lt;p&gt;This is Part 1 in my series of Blog Posts on DotNet interop.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-visual-basic&#34;&gt;Why Visual Basic?&lt;/h2&gt;&#xA;&lt;p&gt;I decided to use visual basic as my first way to show Interop as C# and Visual Basic both share the same programming paradigm of object orientation.&lt;/p&gt;&#xA;&lt;h2 id=&#34;a-sample-of-the-languages&#34;&gt;A sample of the languages!&lt;/h2&gt;&#xA;&lt;p&gt;Below I have snippets of two classes which are mirrors of each other in both Visual Basic and C#.&lt;/p&gt;&#xA;&lt;h3 id=&#34;visual-basic&#34;&gt;Visual Basic&lt;/h3&gt;&#xA;&lt;script src=&#34;https://gist.github.com/grab-a-byte/f7d0c226dc56c8af6d10e0088b183791.js?file=MyVBClass.vb&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;h3 id=&#34;c&#34;&gt;C#&lt;/h3&gt;&#xA;&lt;script src=&#34;https://gist.github.com/grab-a-byte/05117138274f0babd4b0a508dd1e5be4.js?file=MyCSharpClass.cs&#34;&gt;&lt;/script&gt;&#xA;&#xA;&lt;p&gt;(Those more astute of you will have notice Visual Basic’s superiority with a lack of Semi-Colons and Brackets …)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dotnet  Interop</title>
-      <link>http://localhost:1313/posts/5-dotnet-interop/</link>
+      <link>https://example.org/posts/5-dotnet-interop/</link>
       <pubDate>Sat, 29 Feb 2020 19:38:35 +0000</pubDate>
-      <guid>http://localhost:1313/posts/5-dotnet-interop/</guid>
-      <description>What is DotNet? DotNet is a whole stack. It can get very confusing when talking about .NET and what it is. The main part which actually makes all of the following possible is the .NET runtime.&#xA;What this runtime is in simple terms, is a layer which takes the compiled code, and runs it on the machine. It managed to do this as it reads what is know as Intermediate Language (IL) and translates this to be ran natively on the machine.</description>
+      <guid>https://example.org/posts/5-dotnet-interop/</guid>
+      <description>&lt;h1 id=&#34;what-is-dotnet&#34;&gt;What is DotNet?&lt;/h1&gt;&#xA;&lt;p&gt;DotNet is a whole stack. It can get very confusing when talking about .NET and what it is. The main part which actually makes all of the following possible is the .NET runtime.&lt;/p&gt;&#xA;&lt;p&gt;What this runtime is in simple terms, is a layer which takes the compiled code, and runs it on the machine. It managed to do this as it reads what is know as Intermediate Language (IL) and translates this to be ran natively on the machine. This combination of IL and Runtime allow for some rather interesting things, and in this series of posts, we’ll be talking about Interoperability (Interop for short).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Xamarin Shell for Web Developers</title>
-      <link>http://localhost:1313/posts/4-xamarin-shell-for-web-developers/</link>
+      <link>https://example.org/posts/4-xamarin-shell-for-web-developers/</link>
       <pubDate>Mon, 27 Jan 2020 17:18:40 +0100</pubDate>
-      <guid>http://localhost:1313/posts/4-xamarin-shell-for-web-developers/</guid>
-      <description>Coming from web development, I have become very used to and familiar with the MVC architecture for development. It allows for good decoupling of components and also allows for excellent use of Dependency Injection (DI). Having moved to start teaching myself mobile app development through Xamarin Forms , I found the view centric approach to navigation very odd and strange. It was tightly coupled to the framework and I spent hours trying to come up with the perfect navigation service that was generic enough to use.</description>
-    </item>
-    <item>
-      <title>Can contributing to open source be easy?</title>
-      <link>http://localhost:1313/posts/2-contributing-to-open-source/</link>
-      <pubDate>Sun, 16 Jun 2019 23:38:30 +0100</pubDate>
-      <guid>http://localhost:1313/posts/2-contributing-to-open-source/</guid>
-      <description>A very leading question in the title and the answer is, of course! Nobody said you had to commit code to be part of an open source project, many people commit changes to documentation and this is where my second open source pull request(PR)/ commit lies. I was recently working on a project which is using the Prism Library (https://github.com/PrismLibrary) , a MVVM Framework for Xamarin Forms and WPF (Windows Presentation Foundation).</description>
-    </item>
-    <item>
-      <title>My First Open Source Pull Request</title>
-      <link>http://localhost:1313/posts/1-my-first-pull-request/</link>
-      <pubDate>Thu, 30 May 2019 09:03:20 -0800</pubDate>
-      <guid>http://localhost:1313/posts/1-my-first-pull-request/</guid>
-      <description>I always thought open source would be a scary world and the start of it was. I was shown a nice little website named First Timers Only ( https://www.firsttimersonly.com/ ), and this was my entry point. This lead me to the UpForGrabs page and I started filtering by what I knew, .NET. (Yes I skipped first contributions, if I don’t know how to do a pull request after working in industry for a year, I may be in the wrong profession)</description>
+      <guid>https://example.org/posts/4-xamarin-shell-for-web-developers/</guid>
+      <description>&lt;p&gt;Coming from web development, I have become very used to and familiar with the MVC architecture for development. It allows for good decoupling of components and also allows for excellent use of Dependency Injection (DI). Having moved to start teaching myself mobile app development through Xamarin Forms , I found the view centric approach to navigation very odd and strange. It was tightly coupled to the framework and I spent hours trying to come up with the perfect navigation service that was generic enough to use.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Remove Cached Report Data Ssrs</title>
-      <link>http://localhost:1313/posts/3-remove-cached-report-data-ssrs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/3-remove-cached-report-data-ssrs/</guid>
-      <description>I was working with a SQL Server Reporting Services (SSRS) Report the other day and found myself trying to work with some data changes while writing the report to ensure the report was behaving as expected. Initially, nothing on the report changed even though I had changed the data, I found this odd and thought I might’ve been pointing at the wrong database. After a bit of googling, I found that report data get cached after the first run of previewing a report.</description>
+      <link>https://example.org/posts/3-remove-cached-report-data-ssrs/</link>
+      <pubDate>Thu, 05 Sep 2019 23:48:24 +0100</pubDate>
+      <guid>https://example.org/posts/3-remove-cached-report-data-ssrs/</guid>
+      <description>&lt;p&gt;I was working with a SQL Server Reporting Services (SSRS) Report the other day and found myself trying to work with some data changes while writing the report to ensure the report was behaving as expected. Initially, nothing on the report changed even though I had changed the data, I found this odd and thought I might’ve been pointing at the wrong database. After a bit of googling, I found that report data get cached after the first run of previewing a report.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Can contributing to open source be easy?</title>
+      <link>https://example.org/posts/2-contributing-to-open-source/</link>
+      <pubDate>Sun, 16 Jun 2019 23:38:30 +0100</pubDate>
+      <guid>https://example.org/posts/2-contributing-to-open-source/</guid>
+      <description>&lt;p&gt;A very leading question in the title and the answer is, of course! Nobody said you had to commit code to be part of an open source project, many people commit changes to documentation and this is where my second open source pull request(PR)/ commit lies. I was recently working on a project which is using the Prism Library (&lt;a href=&#34;https://github.com/PrismLibrary)&#34;&gt;https://github.com/PrismLibrary)&lt;/a&gt;, a MVVM Framework for Xamarin Forms and WPF (Windows Presentation Foundation).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Open Source Pull Request</title>
+      <link>https://example.org/posts/1-my-first-pull-request/</link>
+      <pubDate>Thu, 30 May 2019 09:03:20 -0800</pubDate>
+      <guid>https://example.org/posts/1-my-first-pull-request/</guid>
+      <description>&lt;p&gt;I always thought open source would be a scary world and the start of it was. I was shown a nice little website named First Timers Only ( &lt;a href=&#34;https://www.firsttimersonly.com/&#34;&gt;https://www.firsttimersonly.com/&lt;/a&gt; ), and this was my entry point. This lead me to the UpForGrabs page and I started filtering by what I knew, .NET. (Yes I skipped first contributions, if I don’t know how to do a pull request after working in industry for a year, I may be in the wrong profession)&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

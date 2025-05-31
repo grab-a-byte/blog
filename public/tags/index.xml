@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Adam Parker&#39;s Blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://example.org/tags/</link>
     <description>Recent content in Tags on Adam Parker&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 29 Aug 2020 22:18:08 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Csharp</title>
-      <link>http://localhost:1313/tags/csharp/</link>
+      <link>https://example.org/tags/csharp/</link>
       <pubDate>Sat, 29 Aug 2020 22:18:08 +0000</pubDate>
-      <guid>http://localhost:1313/tags/csharp/</guid>
+      <guid>https://example.org/tags/csharp/</guid>
       <description></description>
     </item>
     <item>
       <title>Dotnet Interop</title>
-      <link>http://localhost:1313/tags/dotnet-interop/</link>
+      <link>https://example.org/tags/dotnet-interop/</link>
       <pubDate>Sat, 29 Aug 2020 22:18:08 +0000</pubDate>
-      <guid>http://localhost:1313/tags/dotnet-interop/</guid>
+      <guid>https://example.org/tags/dotnet-interop/</guid>
       <description></description>
     </item>
     <item>
       <title>Visual Basic</title>
-      <link>http://localhost:1313/tags/visual-basic/</link>
+      <link>https://example.org/tags/visual-basic/</link>
       <pubDate>Sat, 29 Aug 2020 22:18:08 +0000</pubDate>
-      <guid>http://localhost:1313/tags/visual-basic/</guid>
+      <guid>https://example.org/tags/visual-basic/</guid>
       <description></description>
     </item>
     <item>
       <title>Open Source</title>
-      <link>http://localhost:1313/tags/open-source/</link>
+      <link>https://example.org/tags/open-source/</link>
       <pubDate>Thu, 30 May 2019 09:03:20 -0800</pubDate>
-      <guid>http://localhost:1313/tags/open-source/</guid>
+      <guid>https://example.org/tags/open-source/</guid>
       <description></description>
     </item>
   </channel>

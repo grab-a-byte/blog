@@ -1,6 +1,6 @@
 ---
 title: 'Remove Cached Report Data Ssrs'
-date: 2019-09-5T23:48:24+01:00
+date: 2019-09-05T23:48:24+01:00
 draft: false
 toc: false
 ---
