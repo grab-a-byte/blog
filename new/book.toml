@@ -1,0 +1,5 @@
+[book]
+authors = ["Adam Parker"]
+language = "en"
+src = "src"
+title = "Grab A Byte Blog"
