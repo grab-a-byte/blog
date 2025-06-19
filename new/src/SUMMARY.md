@@ -10,6 +10,6 @@
     - [C# and Visual Basic](./6-donet-interop-cs-vb.md)
     - [C# and F# Pt. 1](./7-dotnet-interop-cs-fs.md)
     - [C# and F# Pt. 2](./8-dotnet-interop-cs-fs-pt2.md)
-    - [C# and F# Pt. 3](./9-dotnet-interop-cs-fs-pt2.md)
+    - [C# and F# Pt. 3](./9-dotnet-interop-cs-fs-pt3.md)
 - [Functional Syntax Holding It Back?](./10-functional-syntax-holding-it-back.md)
 - [Gameboy ROM disassembler (Zig vs Go)](./11-zig-go-gameboy-rom-disasembly.md)

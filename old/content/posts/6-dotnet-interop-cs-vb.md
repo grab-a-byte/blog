@@ -1,5 +1,5 @@
 ---
-title: 'Dotnet Interop:-  C# and Visual Basic'
+title: 'Dotnet Interop:- C# and Visual Basic'
 date: 2020-04-01T20:47:35Z
 draft: false
 tags: ['Dotnet Interop', 'csharp', 'visual basic']
