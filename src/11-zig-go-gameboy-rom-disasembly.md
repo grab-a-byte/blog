@@ -1,6 +1,6 @@
 # Gameboy ROM disassembler (Zig vs Go)
 
-### 2025-02-01
+### 2025-06-19
 
 # Why bother?
 

@@ -30,7 +30,6 @@ Public Class MyVBClass
 
 End Class
 ```
-TODO: REMOVE THIS {{< gist grab-a-byte f7d0c226dc56c8af6d10e0088b183791 MyVBClass.vb >}}
 
 ### C#
 ```csharp
@@ -52,7 +51,6 @@ namespace CSharpClassLib
     }
 }
 ```
-TODO: REMOVE THIS ONCE DONE {{< gist grab-a-byte 05117138274f0babd4b0a508dd1e5be4 MyCSharpClass.cs >}}
 
 ## So How Do We Get Started
 Both of the above classes were created in their relevant .NET Standard lib file from Visual Studio.
@@ -81,7 +79,6 @@ namespace CSharpConsole
     }
 }
 ```
-TODO: REMOVE THIS: {{< gist grab-a-byte 268eda490d2669e04bd70d9010c874a0 VbInCSharp.cs >}}
 If you didn’t know any better, you may assume that you were using a standard C# library!
 
 To prove this point further, I have also created an Example that uses the popular C# Library Newtonsoft.JSON inside of a Visual Basic Project.
@@ -101,7 +98,6 @@ Module Program
     End Sub
 End Module
 ```
-TODO: REMOVE THIS!!!{{< gist grab-a-byte 7380afd6d40ea1d1727851c646c883e9 NewtonsoftInVB.vb >}}
 Again, as simple as adding the NuGet Package and using it. Rather spectacular if you ask me.
 
 
