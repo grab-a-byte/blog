@@ -1,10 +1,5 @@
----
-title: "My First Open Source Pull Request"
-date: 2019-05-30T09:03:20-08:00
-tags: ['Open Source']
-draft: false
-toc: false
----
+# My First Open Source Pull Request
+### 2019-05-30
 
 I always thought open source would be a scary world and the start of it was. I was shown a nice little website named First Timers Only ( https://www.firsttimersonly.com/ ), and this was my entry point. This lead me to the UpForGrabs page and I started filtering by what I knew, .NET. (Yes I skipped first contributions, if I don’t know how to do a pull request after working in industry for a year, I may be in the wrong profession)
 

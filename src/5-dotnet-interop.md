@@ -1,9 +1,6 @@
----
-title : 'Dotnet  Interop'
-date : 2020-02-29T19:38:35Z
-draft : false
-toc: false
----
+# Dotnet Interop Intro
+
+### 2020-02-29
 
 # What is DotNet?
 

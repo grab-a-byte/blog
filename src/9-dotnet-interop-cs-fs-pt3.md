@@ -1,9 +1,8 @@
----
-title: 'Dotnet Interop: C# and F# Pt. 3'
-date: 2020-08-29T22:18:08Z
-tags: ['Dotnet Interop', 'csharp', 'visual basic']
-draft: false
----
+# C# and F# Pt. 3
+
+### 2020-08-29
+
+This is Part 4 in my series of Blog Posts on DotNet interop.
 
 So over the last couple of posts, we’ve looked at what does work well in C# from F#, and most of it seems to go pretty smoothly. But there are occasions where the languages refuse to play nice with each other. That’s what we’ll be discussing in this final post.
 

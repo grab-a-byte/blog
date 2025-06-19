@@ -1,9 +1,6 @@
----
-title: 'Comparing Zig and Go'
-date: 2025-02-01T20:30:30+01:00
-draft: true
-toc: false
----
+# Gameboy ROM disassembler (Zig vs Go)
+
+### 2025-06-19
 
 # Why bother?
 
@@ -32,7 +29,6 @@ To do this, I create a Gameboy ROM disassembler using the information at
 [PanDocs](https://gbdev.io/pandocs/) and the repo can be found on my [Github[(https://github.com/grab-a-byte/) under the ['gameboy'](https://github.com/grab-a-byte/gameboy) repository.
 
 # Zig
-
 ## Pros
 
 ### Error Handling
@@ -183,7 +179,7 @@ usually give you and error **and** a zero value return when using functions that
 can error)
 
 Here is an example:
-```Go
+```go
 func CanError() int, error {
   if rand.IntN(100) < 50 {
     return 0, fmt.Errorf('Sorry no')
@@ -223,7 +219,7 @@ that could be a massive save for developers dealing with larger switch
 statements.
 
 For Example, I would expect the following to yield a warning or an error:
-```Go
+```go
 x := 42
 switch x {
   1 => fmt.Println("The one and only")

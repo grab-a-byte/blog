@@ -1,9 +1,5 @@
----
-title: 'Is syntax holding back functional programming?'
-date: 2024-07-12T20:30:30+01:00
-draft: false
-toc: false
----
+# Functional Syntax Holding It Back?
+
 While looking through many programming languages over the years, I have come to appreciate the ones which are based around the theory of functional programming. I find they are a joy to write and allow for some very expressive code in few characters. However, when looking at the popularity of many of these languages I've noticed their popularity seems to be low. As you may have guessed from the title, I think a large part of this is down to syntax and I'd like to try and explain why I think this may be. I'd like to preface it with it not being the only reason I think but it's one of the primary reasons as to why this may be.
 
 For reference, this post is purely a food for thought kind of post and is not an argument in any way.
@@ -100,14 +96,14 @@ Obviously coming from that domain will lead to the language trying to replicate 
 - [Unions and Tagged Unions](https://ziglang.org/documentation/0.13.0/#Errors)
 - [Exhaustive Switching](https://ziglang.org/documentation/0.13.0/#Errors)
 
-And this is just to name a few. However the uptake of Zig seems to lean furthermore into this idea of a C-like syntax will bring more people who are willing to try the language and make it more successful. 
+And this is just to name a few. However the uptake of Zig seems to lean furthermore into this idea of a C-like syntax will bring more people who are willing to try the language and make it more successful.
 
 ### Gleam
-Gleam is a really interesting language in that it uses the Erlang BEAM Virtual Machine. Erlang is a well known functional language that has been around for many many years (since 1986!) and currently sits at position 99 on the languish website, again a fairly notable achievement given it's functional and white-spaced nature. 
+Gleam is a really interesting language in that it uses the Erlang BEAM Virtual Machine. Erlang is a well known functional language that has been around for many many years (since 1986!) and currently sits at position 99 on the languish website, again a fairly notable achievement given it's functional and white-spaced nature.
 
 The reason I mention Erlang is because Gleam is a language that had it's Version 1.0 release on the 4th March 2024 and has skyrocketed up to position 174 in the Languish website. While that may not seem impressive, it still puts it in the top 50% of all languages tracked and it is less than double the language that was built for the platform it runs on! Not too shabby for a new language. But also if we take a look at a sample of Gleam code:
 
-```gleam 
+```haskell
 import gleam/io
 
 pub fn main() {
@@ -123,11 +119,11 @@ fn multiply(a: Int, b: Int) -> Int {
 }
 ```
 
-As you can see, while not 100% on the C-like front, we still have the parenthesis for function arguments and the braces for denoting scope. This is for a pure functional language that is running on a VM built for a functional language and we still see parts of C trying to crawl back into the syntax. 
+As you can see, while not 100% on the C-like front, we still have the parenthesis for function arguments and the braces for denoting scope. This is for a pure functional language that is running on a VM built for a functional language and we still see parts of C trying to crawl back into the syntax.
 
 I suppose this is my final point on the matter of showing how languages continue to be driven by the syntax of C and how this syntax could be tied to the popularity of new programming languages.
 
-## Not to say "ML" inspired languages aren't used 
+## Not to say "ML" inspired languages aren't used
 
 I should probably reiterate that non-C-like languages do 100% have a place in the world and can be very useful for particular scenarios, right tool for the job and all that. Furthermore, I'd be amiss to not point out that the benefits functional languages can provide have made their cases shown in the form of some very large companies using these non-C-like languages and having great success with it. Examples of this include:
 

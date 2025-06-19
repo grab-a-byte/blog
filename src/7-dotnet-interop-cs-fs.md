@@ -1,10 +1,8 @@
----
-title: 'Dotnet Interop:- C# and F#'
-date: 2020-04-29T22:04:54Z
-tags: ['Dotnet Interop', 'csharp', 'visual basic']
-draft: false
----
+# C# and F# Pt. 1
 
+### 2020-04-29
+
+This is Part 2 in my series of Blog Posts on DotNet interop.
 ## What makes F# special?
 In the Dotnet world, F# stand out as being the Functional based language. This might sound strange, and I on’t have time to go into the full difference between Function and Object-Oriented languages and paradigms here, please do a google if you wish to learn more.
 
@@ -41,7 +39,7 @@ type x = | One | Two
 
 Can be used in a C# console app as follows:
 
-```cs
+```csharp
 using FSharpClassLib;
 namespace CSharpConsole
 {
@@ -87,7 +85,7 @@ module FunctionalParadigms =
 
 It is used in a C# Console App as follows:
 
-```cs
+```csharp
 using FSharpClassLib;
 using System;
 
@@ -109,7 +107,7 @@ namespace CSharpConsole
 
 And when decompiled, shows the following
 
-```cs
+```csharp
 public sealed class TypeTwo : IEquatable<TypeTwo>, IStructuralEquatable, IComparable<TypeTwo>, IComparable, IStructuralComparable
 {
     public TypeTwo(bool isTrue, double someNumber);
