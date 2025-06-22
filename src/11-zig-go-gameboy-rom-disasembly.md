@@ -26,7 +26,7 @@ so forth actually make much of a difference to speed, binary size and other
 factors.
 
 To do this, I create a Gameboy ROM disassembler using the information at
-[PanDocs](https://gbdev.io/pandocs/) and the repo can be found on my [Github[(https://github.com/grab-a-byte/) under the ['gameboy'](https://github.com/grab-a-byte/gameboy) repository.
+[PanDocs](https://gbdev.io/pandocs/) and the repo can be found on my [Github](https://github.com/grab-a-byte/) under the ['gameboy'](https://github.com/grab-a-byte/gameboy) repository.
 
 # Zig
 ## Pros
