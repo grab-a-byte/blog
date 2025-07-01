@@ -1,7 +1,7 @@
 # Welcome
 
 ## Latest Post
-[Gameboy ROM Disassembler Zig vs Go](./11-zig-go-gameboy-rom-disasembly.md)
+[Int Parser Challenge](./12-int-parser-challenge.md)
 
 ## About
 
