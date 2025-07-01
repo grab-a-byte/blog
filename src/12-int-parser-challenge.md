@@ -54,9 +54,107 @@ Again, while the `codeUnits` property of strings in Dart returns UTF-16 code uni
 
 ## To move left is to multiply
 
-## Adding on the next part after shifting
+So now we have the individual digits as integers, we need to figure out how to be able to turn that into a number that we can actually use at the right place in our final integer. By this I mean if we take the example of "123", we have the numbers 1, 2, and 3 individually but not 100 or 20 which is what we really need. So we need ot figure out how to make each of these turn into the corect number.
+
+If we need to make 2 turn into 20, we can multiply by 10, to make 1 turn into 100 we can multiply by 100. You may start to see a pattern here. The number we need to make is always some multiple of 10; 10,  100, 1000 etc. Something oddly useful in this is that the powers of 10 link to the exact numbers we need. For example
+
+- 10 ^ 0 = 1
+- 10 ^ 1 = 10
+- 10 ^ 2 = 100
+
+Seems rather handy.
+
+So if we were to table the index of our numbers with this we see a problem
+
+| Index | Number | 10 ^ index | Resulting |
+|-------|--------|------------|-----------|
+| 0     | 1      | 1          | 1         |
+| 1     | 2      | 10         | 20        |
+| 2     | 3      | 100        | 300       |
+
+Immedaitely we see that our 300 is higher than the actual number we are trying to get (123) so this clearly isn't right. Have a think about how this could be changed to be correct before reading the next part.
+
+The answer is to reverse our numbers before indexing them, doing so results in the following:
+
+| Index | Number | 10 ^ index | Resulting |
+|-------|--------|------------|-----------|
+| 0     | 3      | 1          | 3         |
+| 1     | 2      | 10         | 20        |
+| 2     | 1      | 100        | 100       |
+
+Now none of these numbers are over our expected amount.
+
+A code example for getting these numbers could look like the following:
+
+```java
+import 'dart:math';
+
+void main() {
+  const intValues = [1,2,3];
+  List<int> mapped = [];
+  for(int i = 0; i < intValues.length; i++){
+    // The '-1' is to stop the off by 1 error while indexing
+    final value = intValues[intValues.length - i - 1];
+    final multiplier = pow(10, i);
+    mapped.add((value * multiplier) as int);
+  }
+  
+  print(mapped);
+}
+
+```
+
+Again feel free to copy the previous code into [dartpad.dev](https://dartpad.dev/) to see the output (spoiler it's `[3, 20, 100]`)
+
+## Putting it all together
+
+Finally, we need to put them all together to find our actual final number. In the case of our example, we can simply add them all together into a final variable. This can be done with a for loop or a more functional concept. An example of this code would be:
+
+```java
+void main() {
+  const intValues = [3, 20, 100];
+  var result = 0;
+  for (var value in intValues){
+    result += value;
+  }
+  print(result);
+}
+```
+Putting all of these steps together gives you the following program (variable names may be different from examples).
+
+```java
+import 'dart:math';
+
+void main() {
+  String number = "123";
+  
+  var numbers = number.codeUnits.map((v) => v - 48).toList();
+  List<int> values = [];
+  
+  for(int i = 0; i < numbers.length; i++){
+    // The '-1' is to stop the off by 1 error while indexing
+    final value = numbers[numbers.length - i - 1];
+    final multiplier = pow(10, i);
+    values.add((value * multiplier) as int);
+  }
+  
+  var result = 0;
+  for(var value in values){
+    result += value;
+  }
+  
+  print(result);
+  print(result.runtimeType)
+}
+```
+
+
+And voilla we have solved our problem. Now to be fair this is how the code eended up by breakign it down and discovering each step. When taking this challenge on myself, the code I produced was different and It is in the next section with more explanation, but we do have a working function that will convert a string to an integer without using the built in parsing method. 
 
 ## Final Code
+
+Below is my final version of the Dart programs. I made 2 versions, a naive version (the function starting with unsafe) which assumes we are being passed a valid input as a string. The second does checks to ensure tehy are all numbers and if it encoutners anything not in that range, it returns null instead. This was my chosen error handling method as I also set myself the further challenge of not allowing myself to assign a variable mysef and do it all with method chaining. It makes the code much harder to read but was a fun [code golf](https://en.wikipedia.org/wiki/Code_golf) challenge to myself.
+
 ### Dart
 ```java
 const AsciiZero = 48;
@@ -77,6 +175,9 @@ void main() {
 ```
 
 ### Zig
+
+
+I also decided to implement it in a language that supports native errors as values. The language I chose was [Zig](https://ziglang.org/) (apologies on the syntax highighting, it is not supported in my site generator of choice). Here you can see how not limiting yourself allows you to be more explicit with the errors to state exactly what went wrong. In this example, I also added support for negative interges (stating with a '-') which the Dart version did not.
 ```js
 const std = @import("std");
 const expect = std.testing.expect;
@@ -131,6 +232,12 @@ fn parseInt(input: ?[]const u8) !i32 {
 
 
 ```
+
+You can find the test suite for both of these in the appendix.
+
+## Conclusion
+I hope you have enjoyed reading this and I also hope you gave this challenge a try yourself before reading. If you did, feel free to share your solution with me by leaving a comment on my gist available [here](https://gist.github.com/grab-a-byte/9d8887e5dab435a389b34a02470f45ec).
+
 
 ## Appendix
 
