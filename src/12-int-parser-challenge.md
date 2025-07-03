@@ -5,6 +5,12 @@
 # The Challenge
 The challenge idea is simple. You get a string (something like "123") and from that you must return a 32 bit integer. You can use everything in the language of your choosing except the built-in Int.Parse (or equivalent) method.
 
+To clarify, it must match as expected: just converting to any old integer won't do, e.g. "123" -> 123 and "427" -> 427. This means you can't implement it as `input.length` or as my wonderful wife craftily found in Scala:
+
+```scala
+  input.compareTo("123")
+```
+
 How you choose to handle errors is entirely up to you, you can return a null or optional value, you can throw an exception, you can return an error type, the choice is entirely yours.
 
 Before starting to talk about the solution, I will challenge you to give this short coding problem a go yourself before reading on to the solution. This post is formatted in steps to explain the solution; so if you are uncertain of where to start, you should be able to read the next section and hopefully it will provide a hint as to the next step you are able to take.
@@ -59,7 +65,7 @@ You can put the above code into [dartpad.dev](https://dartpad.dev/) to have a pl
 
 ## To move left is to multiply
 
-So now we have the individual digits as integers, we need to figure out how to be able to turn that into a number that we can actually use at the right place in our final integer. By this I mean if we take the example of "123", we have the numbers 1, 2, and 3 individually but not 100 or 20 which is what we really need. So we need to figure out how to make each of these turn into the correct number.
+So now we have the individual digits as integers, we need to figure out how to be able to turn that into a number that we can actually use at the right place in our final integer. By this I mean if we take the example of "123", we have the numbers 1, 2, and 3 individually but not 100 or 20 which is what we really need. So we need to figure out how to make each of these turn into the correct digit.
 
 If we need to make 2 turn into 20, we can multiply by 10, to make 1 turn into 100 we can multiply by 100. You may start to see a pattern here. The number we need to make is always some multiple of 10; 10,  100, 1000 etc. Something oddly useful in this is that the powers of 10 link to the exact numbers we need. For example
 
@@ -115,7 +121,7 @@ You can place the code code into [dartpad.dev](https://dartpad.dev/) to have a p
 
 ## Putting it all together
 
-Finally, we need to put them all together to find our actual final number. In the case of our example, we can simply add them all together into a final variable. This can be done with a for loop or a more functional concept. An example of this code would be:
+Finally, we need to put them all together to find our actual final number. In the case of our example, we can simply add them all together into a final variable. This can be done with a for loop or a more functional concept (e.g. fold). An example of this code would be:
 
 ```java
 void main() {
@@ -140,9 +146,11 @@ import 'dart:math';
 void main() {
   String number = "123";
   
+  //Section 1: Characters are Integers
   var numbers = number.codeUnits.map((v) => v - 48).toList();
   List<int> values = [];
   
+  //Section 2: To move left is to multiply
   for(int i = 0; i < numbers.length; i++){
     // The '-1' is to stop the off by 1 error while indexing
     final value = numbers[numbers.length - i - 1];
@@ -150,6 +158,7 @@ void main() {
     values.add((value * multiplier) as int);
   }
   
+  //Part 3: Putting it all together
   var result = 0;
   for(var value in values){
     result += value;
@@ -163,13 +172,14 @@ void main() {
 // int
 ```
 
+I have added comments that link to each section so that the full implementation can be linked back to the parts of this post.
 
 And just like that we have solved our problem. Now to be fair this is how the code ended up by breaking it down and discovering each step. When taking this challenge on myself, the code I produced was different and is in the next section with more explanation, but we do have a working function that will convert a string to an integer without using the built in parsing method. 
 
 ## Final Code
 
 ### Dart
-In Dart, I made 2 versions, a naive version (the function starting with unsafe) which assumes we are being passed a valid input as a string. The second does checks to ensure they are all numbers and if it encounters anything not in that range, it returns null instead. This was my chosen error handling method as I also set myself the further challenge of not allowing myself to assign a variable directly and do it all with method chaining. It makes the code much harder to read but was a fun [code golf](https://en.wikipedia.org/wiki/Code_golf) challenge to myself.
+In Dart, I made 2 versions, a naive version (the function named `unsafeParseInt`) which assumes we are being passed a valid input as a string. The second does checks to ensure they are all numbers and if it encounters anything not in that range, it returns null instead. This was my chosen error handling method as I also set myself the further challenge of not allowing myself to assign a variable directly and do it all with method chaining. It makes the code much harder to read but was a fun [code golf](https://en.wikipedia.org/wiki/Code_golf) challenge to myself.
 
 ```java
 const AsciiZero = 48;
@@ -189,9 +199,16 @@ void main() {
 }
 ```
 
-### Zig
+Some questions you could ask yourself on this could be:
+1) What other restrictions could I add to make this more difficult?
+2) Could I implement it in another language?
+3) What better ways of handling errors could there be?
+4) Should I handle negative numbers?
 
-I also decided to implement it in a language that supports native errors as values. The language I chose was [Zig](https://ziglang.org/) (apologies on the syntax highlighting, it is not supported in my site generator of choice). Here you can see how not limiting yourself allows you to be more explicit with the errors to state exactly what went wrong. In this example, I also added support for negative integers (starting with a '-' ) which the Dart version did not.
+I asked myself some of these and that lead me to the second implementation below.
+
+### Zig
+For this part, I took questions 2, 3 and 4 from the above and chose to implement it in a language that supports native errors as values. The language I chose was [Zig](https://ziglang.org/) (apologies on the syntax highlighting, it is not supported in my site generator of choice). Here you can see how not limiting yourself allows you to be more explicit with the errors to state exactly what went wrong. In this example, I also added support for negative integers (starting with a '-' ) which the Dart version did not.
 ```js
 const std = @import("std");
 const expect = std.testing.expect;
@@ -212,25 +229,31 @@ fn parseInt(input: ?[]const u8) !i32 {
         return error.EmptyParameter;
 
     var index: usize = 0;
+    //Determine if negative or positive
     const direction: i2 = switch (str[0]) {
         '+' => 1,
         '-' => -1,
         else => 1,
     };
 
+    //Skip the starting char if it is '+' or '-'
     if (str[0] == '+' or str[0] == '-') {
         index += 1;
     }
 
+    //Using a u32 to allow for going over max i32 value
     var result: u32 = 0;
     for (str[index..]) |char| {
         if (char >= '0' and char <= '9') {
             result *= 10;
+            //Zig allows substracting of characters as they are all u8's
             result += (char - '0');
         } else {
             return error.InvalidCharacter;
         }
     }
+
+    //Determine if number is too large to go in int32
     if (result > maximumInt32) {
         return switch (direction) {
             1 => error.ValueTooHigh,
@@ -239,13 +262,15 @@ fn parseInt(input: ?[]const u8) !i32 {
         };
     }
 
+    //Some type shenanigans to make compiler happy
     const signedResult: i32 = @intCast(result);
+    //Multiply by direction to give a negative number if started with '-'
     const finalResult = signedResult * direction;
     return finalResult;
 }
 
-
 ```
+Many comments have been added to the above code to help with following along for those both unfamiliar to the problem space and to Zig.
 
 You can find the test suite for both of these in the appendix.
 
@@ -370,7 +395,7 @@ test "parses unsuccessfully" {
 }
 ```
 
-### Ascii Table
+### Full Ascii Table
 | Decimal | Character | Description           |
 |---------|-----------|-----------------------|
 | 0       | NUL       | Null character        |
