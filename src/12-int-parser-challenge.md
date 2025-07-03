@@ -7,12 +7,12 @@ The challenge idea is simple. You get a string (something like "123") and from t
 
 How you choose to handle errors is entirely up to you, you can return a null or optional value, you can throw an exception, you can return an error type, the choice is entirely yours.
 
-Before I start to talk about the solution, I will challenge you to give this short coding problem a go before reading on to the solution. However I have also formatted this post in a particular order to explain the solution so if you are uncertain of where to start, you should be able to read the next header and hopefully it will provide a hint as to the next step you are able to take.
+Before starting to talk about the solution, I will challenge you to give this short coding problem a go yourself before reading on to the solution. This post is formatted in steps to explain the solution; so if you are uncertain of where to start, you should be able to read the next section and hopefully it will provide a hint as to the next step you are able to take.
 
 All the code examples (up until the last one) are written in the Dart Programming language which can be found at [https://dart.dev/](https://dart.dev/)
 
 ## Characters are Integers
-The first thing to know to be able to work along with this problem is to know about ASCII. The American Standard Code for Information Interchange (or ASCII) is a format that was created in 1963 and is the basic of what we will talk about today. For reference while most computers will use more modern text encoding formats such as UTF-8 or UTF-16, both of these have the same starting encoding as ASCII making them backwards compatible; we will use ASCII in this post as it is a smaller subset and easier to deal with.
+The first thing to know to be able to work along with this problem is to know about ASCII. The American Standard Code for Information Interchange (or ASCII) is a encoding that was created in 1963 and is the builing block of what we will talk about today. For reference while most computers will use more modern text encoding formats such as [UTF-8](https://www.w3schools.com/charsets/ref_utf_basic_latin.asp) or [UTF-16](https://www.fileformat.info/info/charset/UTF-16/list.htm), both of these have the same starting encoding as ASCII making them backwards compatible. We will use ASCII in this post as it is a smaller subset and easier to deal with.
 
 Below is a subset of the full ASCII table, you can see the full table at the bottom of the post under the Appendix.
 
@@ -37,7 +37,6 @@ Below is a subset of the full ASCII table, you can see the full table at the bot
 From this table, note that the digit characters in the string are actually represented in memory as the integers 48 to 57.
 That means to be able to get the integer values of the actual character, we can subtract 48 from the character to get the values.
 
-If you run the following code at [dartpad.dev](https://dartpad.dev/) then you will be able to see the output.
 
 ```java
 void main() {
@@ -48,9 +47,15 @@ void main() {
   final mappedValues = values.map((v) => v-48);
   print(mappedValues);
 }
+
+// OUTPUT:
+// [56, 52, 50]
+// (8, 4, 2)
 ```
 
-Again, while the `codeUnits` property of strings in Dart returns UTF-16 code units, as the start of this encoding and ASCII are the same, it works for our example.
+While the `codeUnits` property of strings in Dart returns UTF-16 code units, as the start of this encoding and ASCII are the same, it works for our example.
+
+You can put the above code into [dartpad.dev](https://dartpad.dev/) to have a play around and improve your understanding of this section.
 
 ## To move left is to multiply
 
@@ -102,9 +107,11 @@ void main() {
   print(mapped);
 }
 
+// OUTPUT:
+// [3, 20, 100]
 ```
 
-Again feel free to copy the previous code into [dartpad.dev](https://dartpad.dev/) to see the output (spoiler it's `[3, 20, 100]`)
+You can place the code code into [dartpad.dev](https://dartpad.dev/) to have a play around with it.
 
 ## Putting it all together
 
@@ -118,7 +125,12 @@ void main() {
     result += value;
   }
   print(result);
+  print(result.runtimeType);
 }
+// OUTPUT:
+// 123
+// int
+
 ```
 Putting all of these steps together gives you the following program (variable names may be different from examples).
 
@@ -146,16 +158,19 @@ void main() {
   print(result);
   print(result.runtimeType)
 }
+// OUTPUT:
+// 123
+// int
 ```
 
 
-And just like that we have solved our problem. Now to be fair this is how the code ended up by breaking it down and discovering each step. When taking this challenge on myself, the code I produced was different and It is in the next section with more explanation, but we do have a working function that will convert a string to an integer without using the built in parsing method. 
+And just like that we have solved our problem. Now to be fair this is how the code ended up by breaking it down and discovering each step. When taking this challenge on myself, the code I produced was different and is in the next section with more explanation, but we do have a working function that will convert a string to an integer without using the built in parsing method. 
 
 ## Final Code
 
-Below is my final version of the Dart programs. I made 2 versions, a naive version (the function starting with unsafe) which assumes we are being passed a valid input as a string. The second does checks to ensure they are all numbers and if it encounters anything not in that range, it returns null instead. This was my chosen error handling method as I also set myself the further challenge of not allowing myself to assign a variable myself and do it all with method chaining. It makes the code much harder to read but was a fun [code golf](https://en.wikipedia.org/wiki/Code_golf) challenge to myself.
-
 ### Dart
+In Dart, I made 2 versions, a naive version (the function starting with unsafe) which assumes we are being passed a valid input as a string. The second does checks to ensure they are all numbers and if it encounters anything not in that range, it returns null instead. This was my chosen error handling method as I also set myself the further challenge of not allowing myself to assign a variable directly and do it all with method chaining. It makes the code much harder to read but was a fun [code golf](https://en.wikipedia.org/wiki/Code_golf) challenge to myself.
+
 ```java
 const AsciiZero = 48;
 const AsciiNine = 57;
@@ -176,8 +191,7 @@ void main() {
 
 ### Zig
 
-
-I also decided to implement it in a language that supports native errors as values. The language I chose was [Zig](https://ziglang.org/) (apologies on the syntax highlighting, it is not supported in my site generator of choice). Here you can see how not limiting yourself allows you to be more explicit with the errors to state exactly what went wrong. In this example, I also added support for negative integers (stating with a '-') which the Dart version did not.
+I also decided to implement it in a language that supports native errors as values. The language I chose was [Zig](https://ziglang.org/) (apologies on the syntax highlighting, it is not supported in my site generator of choice). Here you can see how not limiting yourself allows you to be more explicit with the errors to state exactly what went wrong. In this example, I also added support for negative integers (starting with a '-' ) which the Dart version did not.
 ```js
 const std = @import("std");
 const expect = std.testing.expect;
