@@ -3,16 +3,16 @@
 ### 2025-07-20
 
 # The Challenge
-The challenge idea is simple. You get a string (something like "123") and from that you must return a 32 bit integer. You can use everything in the language of your chosing except the built-in Int.Parse (or equivelent) method.
+The challenge idea is simple. You get a string (something like "123") and from that you must return a 32 bit integer. You can use everything in the language of your choosing except the built-in Int.Parse (or equivalent) method.
 
 How you choose to handle errors is entirely up to you, you can return a null or optional value, you can throw an exception, you can return an error type, the choice is entirely yours.
 
-Before I start to talk about the solution, I will challenge you to give this short coding problem a go before reading on to the solution. However I have also formatted this post in a particular order to explain the solution so if you are uncertain of where to start, you shoudl be able to read the next header and hopefully it will provide a hint as to the next step you are able to take.
+Before I start to talk about the solution, I will challenge you to give this short coding problem a go before reading on to the solution. However I have also formatted this post in a particular order to explain the solution so if you are uncertain of where to start, you should be able to read the next header and hopefully it will provide a hint as to the next step you are able to take.
 
 All the code examples (up until the last one) are written in the Dart Programming language which can be found at [https://dart.dev/](https://dart.dev/)
 
 ## Characters are Integers
-The first thing to know to be able to work along with this problem is to know about ASCII. The American Standard Code for Information Interchange (or ASCII) is a format that was created in 1963 and is the basic of what we will talk about today. For reference while most computers will use more modern text encoding formats such as UTF-8 or UTF-16, both of these have the same stargin encoding as ASCII making them backwards compatible; we will use ASCII in this post as it is a smaller subset and easier to deal with.
+The first thing to know to be able to work along with this problem is to know about ASCII. The American Standard Code for Information Interchange (or ASCII) is a format that was created in 1963 and is the basic of what we will talk about today. For reference while most computers will use more modern text encoding formats such as UTF-8 or UTF-16, both of these have the same starting encoding as ASCII making them backwards compatible; we will use ASCII in this post as it is a smaller subset and easier to deal with.
 
 Below is a subset of the full ASCII table, you can see the full table at the bottom of the post under the Appendix.
 
@@ -35,7 +35,7 @@ Below is a subset of the full ASCII table, you can see the full table at the bot
 | 60      | <         | Less-than sign        |
 
 From this table, note that the digit characters in the string are actually represented in memory as the integers 48 to 57.
-That means to be able to get the integer values of the actual character, we can substract 48 from the character to get the values.
+That means to be able to get the integer values of the actual character, we can subtract 48 from the character to get the values.
 
 If you run the following code at [dartpad.dev](https://dartpad.dev/) then you will be able to see the output.
 
@@ -54,7 +54,7 @@ Again, while the `codeUnits` property of strings in Dart returns UTF-16 code uni
 
 ## To move left is to multiply
 
-So now we have the individual digits as integers, we need to figure out how to be able to turn that into a number that we can actually use at the right place in our final integer. By this I mean if we take the example of "123", we have the numbers 1, 2, and 3 individually but not 100 or 20 which is what we really need. So we need ot figure out how to make each of these turn into the corect number.
+So now we have the individual digits as integers, we need to figure out how to be able to turn that into a number that we can actually use at the right place in our final integer. By this I mean if we take the example of "123", we have the numbers 1, 2, and 3 individually but not 100 or 20 which is what we really need. So we need to figure out how to make each of these turn into the correct number.
 
 If we need to make 2 turn into 20, we can multiply by 10, to make 1 turn into 100 we can multiply by 100. You may start to see a pattern here. The number we need to make is always some multiple of 10; 10,  100, 1000 etc. Something oddly useful in this is that the powers of 10 link to the exact numbers we need. For example
 
@@ -72,7 +72,7 @@ So if we were to table the index of our numbers with this we see a problem
 | 1     | 2      | 10         | 20        |
 | 2     | 3      | 100        | 300       |
 
-Immedaitely we see that our 300 is higher than the actual number we are trying to get (123) so this clearly isn't right. Have a think about how this could be changed to be correct before reading the next part.
+Immediately we see that our 300 is higher than the actual number we are trying to get (123) so this clearly isn't right. Have a think about how this could be changed to be correct before reading the next part.
 
 The answer is to reverse our numbers before indexing them, doing so results in the following:
 
@@ -149,11 +149,11 @@ void main() {
 ```
 
 
-And voilla we have solved our problem. Now to be fair this is how the code eended up by breakign it down and discovering each step. When taking this challenge on myself, the code I produced was different and It is in the next section with more explanation, but we do have a working function that will convert a string to an integer without using the built in parsing method. 
+And just like that we have solved our problem. Now to be fair this is how the code ended up by breaking it down and discovering each step. When taking this challenge on myself, the code I produced was different and It is in the next section with more explanation, but we do have a working function that will convert a string to an integer without using the built in parsing method. 
 
 ## Final Code
 
-Below is my final version of the Dart programs. I made 2 versions, a naive version (the function starting with unsafe) which assumes we are being passed a valid input as a string. The second does checks to ensure tehy are all numbers and if it encoutners anything not in that range, it returns null instead. This was my chosen error handling method as I also set myself the further challenge of not allowing myself to assign a variable mysef and do it all with method chaining. It makes the code much harder to read but was a fun [code golf](https://en.wikipedia.org/wiki/Code_golf) challenge to myself.
+Below is my final version of the Dart programs. I made 2 versions, a naive version (the function starting with unsafe) which assumes we are being passed a valid input as a string. The second does checks to ensure they are all numbers and if it encounters anything not in that range, it returns null instead. This was my chosen error handling method as I also set myself the further challenge of not allowing myself to assign a variable myself and do it all with method chaining. It makes the code much harder to read but was a fun [code golf](https://en.wikipedia.org/wiki/Code_golf) challenge to myself.
 
 ### Dart
 ```java
@@ -177,7 +177,7 @@ void main() {
 ### Zig
 
 
-I also decided to implement it in a language that supports native errors as values. The language I chose was [Zig](https://ziglang.org/) (apologies on the syntax highighting, it is not supported in my site generator of choice). Here you can see how not limiting yourself allows you to be more explicit with the errors to state exactly what went wrong. In this example, I also added support for negative interges (stating with a '-') which the Dart version did not.
+I also decided to implement it in a language that supports native errors as values. The language I chose was [Zig](https://ziglang.org/) (apologies on the syntax highlighting, it is not supported in my site generator of choice). Here you can see how not limiting yourself allows you to be more explicit with the errors to state exactly what went wrong. In this example, I also added support for negative integers (stating with a '-') which the Dart version did not.
 ```js
 const std = @import("std");
 const expect = std.testing.expect;
@@ -379,7 +379,7 @@ test "parses unsuccessfully" {
 | 32      | SPACE     | Space                 |
 | 33      | !         | Exclamation mark      |
 | 34      | "         | Double quote          |
-| 35      | #         | Number sign           |
+| 35      | #         | Hash sign             |
 | 36      | $         | Dollar sign           |
 | 37      | %         | Percent sign          |
 | 38      | &         | Ampersand             |
