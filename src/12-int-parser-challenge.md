@@ -65,7 +65,7 @@ You can put the above code into [dartpad.dev](https://dartpad.dev/) to have a pl
 
 ## To move left is to multiply
 
-So now we have the individual digits as integers, we need to figure out how to be able to turn that into a number that we can actually use at the right place in our final integer. By this I mean if we take the example of "123", we have the numbers 1, 2, and 3 individually but not 100 or 20 which is what we really need. So we need to figure out how to make each of these turn into the correct digit.
+So now we have the individual digits as integers, we need to figure out how to be able to turn that into a number that we can actually use at the right place in our final integer. By this I mean if we take the example of "123", we have the numbers 1, 2, and 3 individually but not 100 or 20 which is what we really need. So we need to figure out how to make each of these turn into the correct number.
 
 If we need to make 2 turn into 20, we can multiply by 10, to make 1 turn into 100 we can multiply by 100. You may start to see a pattern here. The number we need to make is always some multiple of 10; 10,  100, 1000 etc. Something oddly useful in this is that the powers of 10 link to the exact numbers we need. For example
 
