@@ -13,3 +13,5 @@
     - [C# and F# Pt. 3](./9-dotnet-interop-cs-fs-pt3.md)
 - [Functional Syntax Holding It Back?](./10-functional-syntax-holding-it-back.md)
 - [Gameboy ROM disassembler (Zig vs Go)](./11-zig-go-gameboy-rom-disasembly.md)
+- [Challenges](./prefaces/challenges.md)
+    - [Int Parser](./12-int-parser-challenge.md)
