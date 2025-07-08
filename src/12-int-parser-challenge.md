@@ -281,7 +281,7 @@ I hope you have enjoyed reading this and I also hope you gave this challenge a t
 ## One more thing!
 If you enjoyed this post or you'd like to see either a more Test Driven (TDD) approach or just see the same problem addressed in C#, you may enjoy this post, [Parse Integers Manually](https://illumonos.com/csharp/parse-integers-manually), from my friend over at [Illumonos](https://illumonos.com/).
 
-(If you came from there, thanks for checking out my post also, apologies for the loopign links but feel free to read Illumonos's post again!)
+(If you came from there, thanks for checking out my post also, apologies for the looping links but feel free to read Illumonos's post again!)
 
 ## Appendix
 
