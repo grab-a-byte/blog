@@ -1,7 +1,7 @@
 # Welcome
 
 ## Latest Post
-[Int Parser Challenge](./12-int-parser-challenge.md)
+[Morse Code Translator](./13-morse-translator.md)
 
 ## About
 
