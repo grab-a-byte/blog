@@ -15,3 +15,4 @@
 - [Gameboy ROM disassembler (Zig vs Go)](./11-zig-go-gameboy-rom-disasembly.md)
 - [Challenges](./prefaces/challenges.md)
     - [Int Parser](./12-int-parser-challenge.md)
+    - [Morse Code Translator](./13-morse-translator.md)
