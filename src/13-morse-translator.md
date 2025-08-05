@@ -408,7 +408,7 @@ And of course we also learned a bit about Morse Code along the way also.
 ## Summary
 If you are here, thanks for reading through the whole post and sticking with it to the end. If you have any feedback, make an issue on the repo to let me know and I'll get back to you. Again, thanks for sticking through this long post!
 
-Furthermore, if you'd like to see this broken down in C# and into a bit more detail, you can find some posts from my friend over on Illumonons:
+Furthermore, if you'd like to see this broken down in C# and into a bit more detail, you can find some posts from my friend over on Illumonos:
 - [String to Morse](https://illumonos.com/csharp/morse-code-converter)
 - [Morse to String](https://illumonos.com/csharp/morse-code-parser)
 
