@@ -1,7 +1,7 @@
 # Welcome
 
 ## Latest Post
-[Morse Code Translator](./13-morse-translator.md)
+[Open source is not rug pulling](./14-open-source-not-rug-pulls.md)
 
 ## About
 
