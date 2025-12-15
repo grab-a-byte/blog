@@ -16,3 +16,5 @@
 - [Challenges](./prefaces/challenges.md)
     - [Int Parser](./12-int-parser-challenge.md)
     - [Morse Code Translator](./13-morse-translator.md)
+
+- [Going commercial is not rug pulling](./14-open-source-not-rug-pulls.md)
