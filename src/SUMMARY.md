@@ -1,6 +1,7 @@
 # Summary
 
 [Welcome](./welcome.md)
+[Presentations / Talks](./prefaces/talks.md)
 
 - [My First Open Source Pull Request](./1-my-first-pull-request.md)
 - [Contributing to Open Source](./2-contributing-to-open-source.md)
@@ -18,3 +19,4 @@
     - [Morse Code Translator](./13-morse-translator.md)
 
 - [Going commercial is not rug pulling](./14-open-source-not-rug-pulls.md)
+- [To clean or not to clean](./15-to-clean-or-not-to-clean.md)

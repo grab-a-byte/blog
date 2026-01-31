@@ -14,5 +14,5 @@ Hi, my name is Adam Parker, also known as grab-a-byte. This here is my blog, you
 </div>
 
 You can find me on the following
-- [<i class="fa fa-github" aria-hidden="true"></i> Github](https://github.com/grab-a-byte/)
-- [<i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn](https://www.linkedin.com/in/parkeradam-dev/)
+- [<i class="fa-brands fa-github"></i> Github](https://github.com/grab-a-byte/)
+- [<i class="fa-brands fa-linkedin"></i> LinkedIn](https://www.linkedin.com/in/parkeradam-dev/)
