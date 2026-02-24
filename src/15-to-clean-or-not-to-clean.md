@@ -23,7 +23,7 @@ But you know who isn't neccisarily more productive? They are 2 of your closest f
 
 Of course in order to look at how the performance can be affected by these, we can use a benchmark to determine how fast the code will run. So let's benchmark it! To check this out, we start with a project that is fully using all the best practices, it will be a basic and simple calculation service which takes in a JSON request with a left, right and calculation type fields (the example code in the repo only supports addition and subtraction). It performs the relevent operation, stores it in the 'database' (an in-memory list) and returns the result.
 
-For this benchmark, we then record how long it takes for the API to respond to all requests and take that. To ensure that outliers and erroneous results would be removed, the test was run at many different levels and multiple times,
+For this benchmark, we then record how long it takes for the API to respond to all requests and take that figure as our benchmark. To ensure that outliers and erroneous results would be removed, the test was run at many different levels and multiple times,
 
 - The test was run with sending the following number of requests
   - 10
@@ -55,7 +55,7 @@ So to begin with, let's look at how this performs in the benchmark (for brevity,
 | 1,000        | 14      | 24      | 16.9        |
 | 10,000       | 140     | 222     | 170.2       |
 
-For the test of the article, I will be mainly focussing on the bottom right figure, which is the average of the averages across the 10k requests. Why this particular number? It is where we are seeing the most variance in the results, so it's easier to draw conclusions from this figure. All the tables are available wih full figures for your viewing in the 'end-recordings' document.
+For the rest of the article, I will be mainly focussing on the bottom right figure, which is the average of the averages across the 10k requests. Why this particular number? It is where we are seeing the most variance in the results, so it's easier to draw conclusions from this figure. All the tables are available wih full figures for your viewing in the ['end-recordings' document](https://github.com/grab-a-byte/to-clean-or-not-to-clean/blob/main/StartPoint/end-recordings.md).
 
 ## Removing Libraries
 
@@ -63,7 +63,7 @@ So let's start by doing something rather drastic, removing libraries! This might
 
 - Removing the MediatR library
 - Removing Fluent Validations
-- Injecting the MedatR Handlers directly (by replicating the interface in our project)
+- Injecting the MediatR Handlers directly (by replicating the interface in our project)
 - Replacing the Fluent Validation with a static validation function that returns an object of the same shape to be a drop-in replacement.
 
 To show how the code looks now, here are a couple of snippets from the code:
@@ -119,7 +119,7 @@ public static class RequestValidator
 }
 ```
 
-The changes here aren't too radical and yet the amount of performance we gain from this is quite surprising. The figure for this is from `170.2` all the down to _drumroll please_ `160.4`! What an astronomical change. That `9.8`ms makes this a difference of about 5% in speed.
+The changes here aren't too radical and yet the amount of performance we gain from this is quite surprising. The figure for this is from `170.2ms` all the down to _drumroll please_ `160.4ms`! What an astronomical change. That `9.8ms` makes this a difference of about 5% in speed.
 
 To put into perspective how much that is, it is the equivalentof taking a
 
@@ -167,13 +167,13 @@ Well we have a few steps to do:
 - Delete the interfaces (and possibly services too)
 - Deregister them from dependency injection (can't inject an interface that doesn't exist)
 
-And that's all of it! Well, almost all of it, I've actually kept the repository interface as when it comes to testing, being able to mock and change your data storage to return whatever state is required for the test. While this seem counter intuitive, I think the only place where keeping interfaces around is in areas of Input/Output (IO) such as network requests or database access, as this allows you to make your unit tests isolateable.
+And that's all of it! Well, almost all of it, I've actually kept the repository interface as when it comes to testing, being able to mock and change your data storage to return whatever state is required for the test. While this seem counter intuitive, I think the only place where keeping interfaces around is necessary is in areas of Input/Output (IO) such as network requests or database access, as this allows you to make your unit tests isolateable.
 
-So with this in mind, at this point in the testing, we are going to start with a average time of _167.4ms_ (all shall be relvealed why this number differs from the previous number later). So what do we gain by completing all this work and effort?
+So with this in mind, at this point in the testing, we are going to start with a average time of `167.4ms` (all shall be revealed why this number differs from the previous number later). So what do we gain by completing all this work and effort?
 
-_162.8_
+`162.8ms`
 
-That's a difference of about _4.6ms_. If you prefer a percentage-based approach, that's about a 2.7% speedup in performace from removing these. Why would this be the case? Well lets think about a few points.
+That's a difference of about `4.6ms`. If you prefer a percentage-based approach, that's about a 2.7% speedup in performace from removing these. Why would this be the case? Well lets think about a few points.
 
 - Interfaces, by their very nature, do not know what they are calling
   - Imagine you are trying to optimize the kitchen of your favourite restaurant when you don't know what staff or cookware, or appliances they have.
@@ -186,11 +186,11 @@ That's a difference of about _4.6ms_. If you prefer a percentage-based approach,
 
 So for those who are eagerly awaiting some more results, let's look at what applying all these things does for us.
 
-So when we started, we were at _170.2ms_ and when applying these, we go to _162.8ms_. That is a whole whopping _7.4ms_ difference or a whopping _4%_ perfomace boost!
+So when we started, we were at `170.2ms` and when applying these, we go to `162.8ms`. That is a whole whopping `7.4ms` difference or a whopping `4%` perfomace boost!
 
 Hmm... that doesnt really seem like much does it? Well, there is 1 figure I have left out up to this point.
 
-_153.4ms_
+`153.4ms`
 
 Now that seems like it would be a major improvement. Even better than the score I listed previously, so where has this magical number came from? Well this figure is from ASP.NET Core just serving and handling the request with a `200 OK` response. With that in mind, let's build a new table!
 
@@ -199,7 +199,7 @@ Now that seems like it would be a major improvement. Even better than the score 
 | 170.2        | 153.4   | 16.8       |
 | 162.8        | 153.4   | 9.4        |
 
-This means our real difference is from _16.8ms_ to _9.4ms_ which is actually a _44%_ speedup in the code we can control. That seems more like it!
+This means our real difference is from `16.8ms` to `9.4ms` which is actually a `44%` speedup in the code we can control. That seems more like it!
 
 As I've been using throughout the course of this article, I will once again use CPU's to compare. This is the equivalent of going from a
 
