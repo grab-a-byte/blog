@@ -219,7 +219,7 @@ Of course, saying all clean code is bad is too much of an overarching statement.
 - Everything is formatted consistently (using our IDE's formatter)
 - We also follow the KISS Principle (Keep It Super Simple) by removing many, many layers of code.
 
-And how do we far on following SOLID principles?
+And how do we fare on following SOLID principles?
 
 - Single Responsibility
   - Yes, the endpoint holds a single responsibility and will only change for that.
