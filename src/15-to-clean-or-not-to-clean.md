@@ -9,9 +9,9 @@ As we start as software developers, we have levels where we start to feel gains 
 - Starting to code
   - You start to code, and every change to the code you make changes something; it feels like a superpower and it feels productive!
 - You learn about Unit Tests
-  - Now you are able to ensure that the code you wrote continues to function as you expect by having a lot of checks to ensure it behves as you expected even after a change! Now you get more productive because you don't have to look at areas you haven't changed to know they aren't broken.
+  - Now you are able to ensure that the code you wrote continues to function as you expect by having a lot of checks to ensure it behaves as you expected even after a change! Now you get more productive because you don't have to look at areas you haven't changed to know they aren't broken.
 - Clean Code enters the mix
-  - You learn about clean code and how it can help with modularity and even increase the ease of unit testing. It makes it faster to iterate, and all this seperation of concerns means you no longer need to know whats going on behind the interface and you can use it and be productive with it.
+  - You learn about clean code and how it can help with modularity and even increase the ease of unit testing. It makes it faster to iterate, and all this separation of concerns means you no longer need to know whats going on behind the interface and you can use it and be productive with it.
 - Design Patterns
   - You learn about design patterns and you gain even more productivity. Now you don't need to think about the solution to the technical problem; someone already did that for you!
 
@@ -19,9 +19,9 @@ And of course, with all this extra productivity, you're able to make perfect cod
 
 Of course not, we all still make mistakes, interactions happen we can't expect, and code changes so fast we can't possibly now what's happening. However, we still feel more productive for it and it's accepted throughout the industry.
 
-But you know who isn't neccisarily more productive? They are 2 of your closest friends when it comes to programming and running yor programs. They are, of course, your CPU and your RAM. Both of these need to work overtime to run all these extra pieces of code with all these levels of indirection as they follow insturctions to pointers all around memory and keeping enough in the CPU cache becomes a difficult job. But of course this all sound like speculation, how can we prove it?
+But you know who isn't necessarily more productive? They are 2 of your closest friends when it comes to programming and running your programs. They are, of course, your CPU and your RAM. Both of these need to work overtime to run all these extra pieces of code with all these levels of indirection as they follow instructions to pointers all around memory and keeping enough in the CPU cache becomes a difficult job. But of course this all sound like speculation, how can we prove it?
 
-Of course in order to look at how the performance can be affected by these, we can use a benchmark to determine how fast the code will run. So let's benchmark it! To check this out, we start with a project that is fully using all the best practices, it will be a basic and simple calculation service which takes in a JSON request with a left, right and calculation type fields (the example code in the repo only supports addition and subtraction). It performs the relevent operation, stores it in the 'database' (an in-memory list) and returns the result.
+Of course in order to look at how the performance can be affected by these, we can use a benchmark to determine how fast the code will run. So let's benchmark it! To check this out, we start with a project that is fully using all the best practices, it will be a basic and simple calculation service which takes in a JSON request with a left, right and calculation type fields (the example code in the repo only supports addition and subtraction). It performs the relevant operation, stores it in the 'database' (an in-memory list) and returns the result.
 
 For this benchmark, we then record how long it takes for the API to respond to all requests and take that figure as our benchmark. To ensure that outliers and erroneous results would be removed, the test was run at many different levels and multiple times,
 
@@ -44,7 +44,7 @@ So let's have a look at the initial project.
 
 </div>
 
-This project uses all the latest and greatest techniquies available to use to date! It has Services, Interfaces, Repositories, it's using Dependency Injection and some pretty great libraries named [MediatR(for CQRS)](https://mediatr.io/) and [Fluent Validation](https://docs.fluentvalidation.net/en/latest/) to make it easier to validate our incoming requests! This structure may look familiar if you've worked in larger dotnet projects in the past.
+This project uses all the latest and greatest techniques available to use to date! It has Services, Interfaces, Repositories, it's using Dependency Injection and some pretty great libraries named [MediatR(for CQRS)](https://mediatr.io/) and [Fluent Validation](https://docs.fluentvalidation.net/en/latest/) to make it easier to validate our incoming requests! This structure may look familiar if you've worked in larger dotnet projects in the past.
 
 So to begin with, let's look at how this performs in the benchmark (for brevity, I am only showing the averaged tables; if you wish to see each individual run, see the ['end recordings' file](https://github.com/grab-a-byte/to-clean-or-not-to-clean/blob/main/StartPoint/end-recordings.md) on Github):
 
@@ -121,7 +121,7 @@ public static class RequestValidator
 
 The changes here aren't too radical and yet the amount of performance we gain from this is quite surprising. The figure for this is from `170.2ms` all the down to _drumroll please_ `160.4ms`! What an astronomical change. That `9.8ms` makes this a difference of about 5% in speed.
 
-To put into perspective how much that is, it is the equivalentof taking a
+To put into perspective how much that is, it is the equivalent of taking a
 
 - Intel i5 14600K
   - Released October 2023
