@@ -1,7 +1,7 @@
 # Welcome
 
 ## Latest Post
-[Open source is not rug pulling](./14-open-source-not-rug-pulls.md)
+[To clean or not to clean](./15-to-clean-or-not-to-clean.md)
 
 ## About
 
